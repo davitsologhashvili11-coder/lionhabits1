@@ -1,0 +1,3027 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LIONhabits — AI Discipline & Habit Tracker</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20760%20760%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22none%22%3E%20%3Cpath%20fill%3D%22%23D4AF37%22%20fill-rule%3D%22evenodd%22%20d%3D%22%20M%20562.12%20455.75%20C%20561.71%20457.97%2C%20561.53%20458.99%2C%20561.38%20461.50%20C%20564.42%20468.54%2C%20571.45%20473.87%2C%20576.24%20480.21%20C%20584.41%20491.02%2C%20584.93%20499.10%2C%20587.88%20511.50%20C%20597.78%20501.59%2C%20597.73%20489.62%2C%20603.12%20477.75%20C%20609.74%20490.01%2C%20606.99%20502.34%2C%20606.12%20515.50%20C%20629.10%20502.47%2C%20644.11%20473.13%2C%20646.18%20447.21%20C%20646.70%20440.59%2C%20645.56%20433.73%2C%20644.62%20427.25%20C%20642.60%20423.61%2C%20642.30%20423.37%2C%20639.38%20420.50%20C%20635.97%20419.59%2C%20634.59%20419.05%2C%20630.88%20419.59%20C%20616.90%20421.66%2C%20583.49%20437.04%2C%20572.11%20445.59%20C%20568.32%20448.44%2C%20565.13%20452.13%2C%20562.12%20455.75%20Z%20M%20653.62%20401.75%20C%20654.96%20404.43%2C%20655.43%20404.85%2C%20657.12%20407.00%20C%20669.58%20399.73%2C%20676.12%20368.24%2C%20677.62%20354.00%20C%20664.15%20359.60%2C%20652.54%20387.46%2C%20653.62%20401.75%20Z%20M%20302.12%20525.25%20C%20280.80%20563.86%2C%20290.70%20609.77%2C%20319.48%20641.85%20C%20335.72%20659.94%2C%20356.34%20673.47%2C%20366.52%20696.50%20C%20370.19%20704.81%2C%20371.11%20714.99%2C%20370.48%20724.00%20C%20370.17%20728.56%2C%20369.30%20730.40%2C%20369.88%20735.25%20C%20379.90%20732.27%2C%20392.01%20722.63%2C%20400.71%20716.24%20C%20429.88%20694.85%2C%20451.36%20668.65%2C%20461.12%20633.19%20C%20464.54%20620.78%2C%20465.37%20608.60%2C%20468.12%20596.25%20C%20476.92%20607.07%2C%20479.89%20633.14%2C%20478.38%20647.07%20C%20477.42%20655.93%2C%20475.07%20664.34%2C%20473.12%20673.00%20C%20481.59%20669.78%2C%20488.58%20662.32%2C%20495.46%20656.43%20C%20533.62%20623.71%2C%20555.40%20576.14%2C%20548.16%20525.67%20C%20546.99%20517.49%2C%20545.87%20506.71%2C%20541.38%20500.00%20C%20539.43%20505.75%2C%20538.20%20511.83%2C%20535.82%20517.44%20C%20529.82%20531.62%2C%20514.03%20552.38%2C%20497.62%20553.25%20C%20498.46%20542.97%2C%20501.57%20532.45%2C%20502.27%20521.83%20C%20502.53%20517.93%2C%20501.54%20515.06%2C%20501.25%20511.36%20C%20499.21%20485.12%2C%20489.55%20437.90%2C%20465.12%20423.50%20C%20465.86%20431.93%2C%20467.89%20440.47%2C%20468.40%20448.94%20C%20469.67%20470.01%2C%20459.19%20503.70%2C%20441.12%20515.75%20C%20441.44%20507.66%2C%20443.32%20499.13%2C%20444.19%20491.02%20C%20445.20%20481.73%2C%20443.78%20468.64%2C%20441.75%20459.54%20C%20436.78%20437.39%2C%20424.13%20417.46%2C%20411.62%20398.84%20C%20404.99%20388.99%2C%20398.16%20380.59%2C%20393.16%20369.62%20C%20388.37%20359.12%2C%20385.23%20347.36%2C%20384.07%20335.89%20C%20383.47%20329.89%2C%20384.46%20324.37%2C%20383.38%20318.25%20C%20373.55%20329.29%2C%20365.99%20352.75%2C%20365.37%20367.64%20C%20363.68%20407.89%2C%20387.38%20441.40%2C%20383.45%20482.13%20C%20382.21%20494.96%2C%20379.30%20506.96%2C%20371.58%20517.62%20C%20366.20%20525.06%2C%20358.66%20532.88%2C%20350.18%20536.66%20C%20337.17%20542.47%2C%20321.73%20542.70%2C%20310.15%20533.34%20C%20307.29%20531.03%2C%20304.87%20527.84%2C%20302.12%20525.25%20Z%20M%20437.88%2071.75%20C%20431.75%2069.38%2C%20426.80%2065.69%2C%20421.07%2062.44%20C%20411.99%2057.28%2C%20403.01%2052.80%2C%20393.15%2049.25%20C%20351.89%2034.43%2C%20311.69%2033.03%2C%20269.33%2043.60%20C%20261.59%2045.53%2C%20249.98%2047.96%2C%20243.88%2052.50%20C%20269.44%2056.93%2C%20310.24%2063.72%2C%20327.12%2085.50%20C%20318.16%2085.56%2C%20307.97%2083.25%2C%20298.90%2082.26%20C%20291.20%2081.43%2C%20278.50%2081.67%2C%20270.67%2082.21%20C%20237.99%2084.49%2C%20200.45%2099.65%2C%20174.47%20119.42%20C%20167.08%20125.03%2C%20160.76%20131.23%2C%20153.87%20137.32%20C%20142.51%20147.36%2C%20119.53%20172.35%2C%20115.38%20186.50%20C%20124.63%20183.35%2C%20134.66%20176.85%2C%20144.13%20172.88%20C%20168.32%20162.72%2C%20193.85%20157.33%2C%20220.00%20157.37%20C%20225.90%20157.38%2C%20231.05%20156.82%2C%20236.62%20158.50%20C%20229.78%20162.46%2C%20220.99%20164.67%2C%20213.49%20167.84%20C%20199.93%20173.58%2C%20186.33%20180.41%2C%20173.87%20188.27%20C%20121.03%20221.59%2C%2089.83%20271.47%2C%2081.29%20333.24%20C%2080.08%20342.05%2C%2077.73%20356.13%2C%2079.12%20364.50%20C%2088.24%20355.86%2C%2096.27%20341.76%2C%20105.10%20331.80%20C%20121.31%20313.52%2C%20157.32%20288.76%2C%20180.88%20282.00%20C%20176.72%20287.85%2C%20171.74%20291.67%2C%20167.03%20296.95%20C%20157.24%20307.93%2C%20147.46%20320.05%2C%20139.66%20332.56%20C%20110.64%20379.03%2C%20102.12%20432.35%2C%20115.37%20485.30%20C%20117.81%20495.04%2C%20121.81%20509.94%2C%20127.62%20517.75%20C%20129.90%20511.53%2C%20129.42%20504.29%2C%20130.46%20497.54%20C%20133.28%20479.29%2C%20145.83%20448.29%2C%20159.88%20436.50%20C%20160.49%20443.45%2C%20158.91%20451.02%2C%20158.22%20457.99%20C%20157.10%20469.40%2C%20157.01%20481.56%2C%20158.27%20492.96%20C%20166.11%20563.92%2C%20213.02%20616.31%2C%20275.38%20647.25%20C%20272.80%20641.04%2C%20265.08%20634.02%2C%20260.73%20627.86%20C%20251.99%20615.48%2C%20244.50%20602.31%2C%20238.59%20588.35%20C%20232.94%20575.02%2C%20230.44%20559.88%2C%20228.94%20545.65%20C%20224.23%20500.97%2C%20235.21%20459.13%2C%20258.35%20420.77%20C%20264.81%20410.06%2C%20272.14%20398.42%2C%20280.88%20389.50%20C%20281.69%20400.26%2C%20277.94%20413.67%2C%20277.16%20424.77%20C%20275.74%20445.03%2C%20285.67%20480.30%2C%20312.71%20473.93%20C%20323.41%20471.40%2C%20329.53%20462.13%2C%20332.28%20452.08%20C%20336.85%20435.40%2C%20328.78%20415.70%2C%20325.25%20399.36%20C%20312.39%20339.88%2C%20329.68%20294.50%2C%20371.04%20251.04%20C%20381.97%20239.56%2C%20413.08%20212.40%2C%20427.88%20209.50%20C%20425.18%20225.36%2C%20420.49%20239.17%2C%20419.36%20255.71%20C%20416.88%20291.73%2C%20438.29%20343.01%2C%20464.62%20367.25%20C%20475.89%20344.84%2C%20484.50%20325.63%2C%20514.03%20328.22%20C%20521.90%20328.90%2C%20526.70%20329.24%2C%20533.38%20333.75%20C%20524.43%20342.68%2C%20518.58%20346.55%2C%20514.52%20359.46%20C%20507.89%20380.54%2C%20524.24%20418.81%2C%20546.59%20423.82%20C%20567.01%20428.40%2C%20617.35%20411.02%2C%20632.75%20397.26%20C%20640.32%20390.50%2C%20646.93%20377.01%2C%20647.24%20366.74%20C%20647.73%20350.50%2C%20627.76%20346.24%2C%20618.78%20336.41%20C%20613.35%20330.46%2C%20612.67%20324.56%2C%20611.62%20317.00%20C%20616.72%20318.17%2C%20621.06%20321.18%2C%20626.38%20322.17%20C%20632.53%20323.31%2C%20640.47%20321.88%2C%20646.88%20322.29%20C%20660.45%20323.18%2C%20668.10%20328.95%2C%20681.38%20321.25%20C%20677.70%20312.56%2C%20671.19%20308.78%2C%20664.52%20302.53%20C%20653.86%20292.54%2C%20643.45%20282.23%2C%20632.55%20272.49%20C%20622.11%20263.18%2C%20610.38%20254.13%2C%20600.62%20244.25%20C%20599.58%20237.07%2C%20602.51%20229.52%2C%20600.56%20222.24%20C%20596.19%20205.91%2C%20558.98%20179.92%2C%20545.12%20168.50%20C%20549.51%20157.33%2C%20555.47%20150.37%2C%20557.06%20137.50%20C%20561.25%20103.59%2C%20535.97%2068.63%2C%20509.88%2049.75%20C%20509.38%2066.35%2C%20518.79%2085.73%2C%20509.12%20102.00%20C%20502.70%2088.33%2C%20497.04%2075.80%2C%20487.16%2064.04%20C%20470.56%2044.25%2C%20437.23%2026.56%2C%20411.38%2024.25%20C%20413.89%2028.59%2C%20416.47%2030.49%2C%20419.49%2034.39%20C%20426.39%2043.30%2C%20437.76%2060.74%2C%20437.88%2071.75%20Z%20M%20570.88%20282.50%20C%20560.78%20277.54%2C%20552.55%20268.03%2C%20542.25%20263.23%20C%20533.09%20258.97%2C%20525.95%20260.70%2C%20517.06%20258.76%20C%20502.42%20255.57%2C%20490.84%20243.03%2C%20479.62%20233.75%20C%20490.99%20229.16%2C%20530.17%20228.04%2C%20540.35%20235.50%20C%20546.54%20240.03%2C%20567.66%20274.45%2C%20570.88%20282.50%20Z%20M%20427.62%20161.25%20C%20421.58%20165.94%2C%20408.44%20172.80%2C%20401.12%20175.50%20C%20391.99%20170.27%2C%20380.91%20162.10%2C%20369.83%20161.53%20C%20366.21%20161.34%2C%20362.39%20163.07%2C%20359.73%20165.43%20C%20348.12%20175.74%2C%20354.74%20198.60%2C%20359.12%20211.00%20C%20355.75%20218.26%2C%20351.21%20224.79%2C%20345.88%20230.75%20C%20334.19%20211.71%2C%20313.81%20148.11%2C%20341.39%20134.63%20C%20354.61%20128.17%2C%20376.68%20136.35%2C%20389.38%20141.46%20C%20401.35%20146.27%2C%20418.07%20152.90%2C%20427.62%20161.25%20Z%20%22/%3E%20%3C/svg%3E" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+Georgian:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Noto Sans Georgian"', 'Inter', 'sans-serif'],
+          },
+          colors: {
+            obsidian: '#070709',
+            surface: '#0e0e12',
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    html, body {
+      max-width: 100%;
+      overflow-x: hidden;
+      overscroll-behavior-x: none;
+    }
+
+    /* Strict Anti-Copy & Anti-Selection Protection across all devices */
+    *, *::before, *::after {
+      -webkit-user-select: none !important;
+      -moz-user-select: none !important;
+      -ms-user-select: none !important;
+      user-select: none !important;
+      -webkit-touch-callout: none !important;
+    }
+
+    input, textarea {
+      -webkit-user-select: text !important;
+      -moz-user-select: text !important;
+      -ms-user-select: text !important;
+      user-select: text !important;
+    }
+
+    img, svg {
+      -webkit-user-drag: none !important;
+      user-drag: none !important;
+    }
+
+    @media print {
+      html, body {
+        display: none !important;
+        visibility: hidden !important;
+      }
+    }
+
+    body {
+      background-color: #fafaf9;
+      color: #18181b;
+      font-family: 'Noto Sans Georgian', 'Inter', sans-serif;
+      width: 100%;
+      position: relative;
+      transition: background-color 0.35s ease, color 0.35s ease, filter 0.2s ease;
+      animation: pageReveal 0.65s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    html.dark body {
+      background-color: #070709;
+      color: #f4f4f5;
+    }
+
+    body.screen-shield-active {
+      filter: blur(22px) brightness(0.45);
+      pointer-events: none;
+    }
+
+    @keyframes pageReveal {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .view-panel {
+      animation: pageReveal 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    @keyframes floatParticle {
+      0%, 100% {
+        transform: translateY(0) scale(1);
+        opacity: 0.3;
+      }
+      50% {
+        transform: translateY(-16px) scale(1.2);
+        opacity: 0.85;
+      }
+    }
+    .ember-dot {
+      position: absolute;
+      border-radius: 9999px;
+      background: radial-gradient(circle, #fde68a 0%, #f59e0b 65%, transparent 100%);
+      pointer-events: none;
+      animation: floatParticle ease-in-out infinite;
+    }
+
+    /* Smooth Custom Range Slider */
+    input[type="range"].lion-slider {
+      -webkit-appearance: none;
+      appearance: none;
+      height: 8px;
+      border-radius: 9999px;
+      background: #e4e4e7;
+      outline: none;
+      border: 1px solid rgba(217, 119, 6, 0.3);
+    }
+    html.dark input[type="range"].lion-slider {
+      background: #18181b;
+      border-color: rgba(245, 158, 11, 0.25);
+    }
+    input[type="range"].lion-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 24px;
+      height: 24px;
+      border-radius: 9999px;
+      background: linear-gradient(135deg, #fde68a, #f59e0b);
+      cursor: pointer;
+      box-shadow: 0 0 16px rgba(245, 158, 11, 0.55);
+      border: 2px solid #ffffff;
+      transition: transform 0.15s ease;
+    }
+    html.dark input[type="range"].lion-slider::-webkit-slider-thumb {
+      border-color: #09090b;
+    }
+    input[type="range"].lion-slider::-webkit-slider-thumb:hover {
+      transform: scale(1.12);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #d4d4d8;
+      border-radius: 9999px;
+    }
+    html.dark ::-webkit-scrollbar-thumb {
+      background: #27272a;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #d97706;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col select-none">
+
+  <!-- Embedded Vector Symbol -->
+  <svg xmlns="http://www.w3.org/2000/svg" class="hidden" aria-hidden="true">
+    <symbol id="custom-lion-vector" viewBox="0 0 760 760">
+      <path fill="#D4AF37" fill-rule="evenodd" d="
+    M 562.12 455.75 C 561.71 457.97, 561.53 458.99, 561.38 461.50 C 564.42 468.54, 571.45 473.87, 576.24 480.21 C 584.41 491.02, 584.93 499.10, 587.88 511.50 C 597.78 501.59, 597.73 489.62, 603.12 477.75 C 609.74 490.01, 606.99 502.34, 606.12 515.50 C 629.10 502.47, 644.11 473.13, 646.18 447.21 C 646.70 440.59, 645.56 433.73, 644.62 427.25 C 642.60 423.61, 642.30 423.37, 639.38 420.50 C 635.97 419.59, 634.59 419.05, 630.88 419.59 C 616.90 421.66, 583.49 437.04, 572.11 445.59 C 568.32 448.44, 565.13 452.13, 562.12 455.75 Z
+    M 653.62 401.75 C 654.96 404.43, 655.43 404.85, 657.12 407.00 C 669.58 399.73, 676.12 368.24, 677.62 354.00 C 664.15 359.60, 652.54 387.46, 653.62 401.75 Z
+    M 302.12 525.25 C 280.80 563.86, 290.70 609.77, 319.48 641.85 C 335.72 659.94, 356.34 673.47, 366.52 696.50 C 370.19 704.81, 371.11 714.99, 370.48 724.00 C 370.17 728.56, 369.30 730.40, 369.88 735.25 C 379.90 732.27, 392.01 722.63, 400.71 716.24 C 429.88 694.85, 451.36 668.65, 461.12 633.19 C 464.54 620.78, 465.37 608.60, 468.12 596.25 C 476.92 607.07, 479.89 633.14, 478.38 647.07 C 477.42 655.93, 475.07 664.34, 473.12 673.00 C 481.59 669.78, 488.58 662.32, 495.46 656.43 C 533.62 623.71, 555.40 576.14, 548.16 525.67 C 546.99 517.49, 545.87 506.71, 541.38 500.00 C 539.43 505.75, 538.20 511.83, 535.82 517.44 C 529.82 531.62, 514.03 552.38, 497.62 553.25 C 498.46 542.97, 501.57 532.45, 502.27 521.83 C 502.53 517.93, 501.54 515.06, 501.25 511.36 C 499.21 485.12, 489.55 437.90, 465.12 423.50 C 465.86 431.93, 467.89 440.47, 468.40 448.94 C 469.67 470.01, 459.19 503.70, 441.12 515.75 C 441.44 507.66, 443.32 499.13, 444.19 491.02 C 445.20 481.73, 443.78 468.64, 441.75 459.54 C 436.78 437.39, 424.13 417.46, 411.62 398.84 C 404.99 388.99, 398.16 380.59, 393.16 369.62 C 388.37 359.12, 385.23 347.36, 384.07 335.89 C 383.47 329.89, 384.46 324.37, 383.38 318.25 C 373.55 329.29, 365.99 352.75, 365.37 367.64 C 363.68 407.89, 387.38 441.40, 383.45 482.13 C 382.21 494.96, 379.30 506.96, 371.58 517.62 C 366.20 525.06, 358.66 532.88, 350.18 536.66 C 337.17 542.47, 321.73 542.70, 310.15 533.34 C 307.29 531.03, 304.87 527.84, 302.12 525.25 Z
+    M 437.88 71.75 C 431.75 69.38, 426.80 65.69, 421.07 62.44 C 411.99 57.28, 403.01 52.80, 393.15 49.25 C 351.89 34.43, 311.69 33.03, 269.33 43.60 C 261.59 45.53, 249.98 47.96, 243.88 52.50 C 269.44 56.93, 310.24 63.72, 327.12 85.50 C 318.16 85.56, 307.97 83.25, 298.90 82.26 C 291.20 81.43, 278.50 81.67, 270.67 82.21 C 237.99 84.49, 200.45 99.65, 174.47 119.42 C 167.08 125.03, 160.76 131.23, 153.87 137.32 C 142.51 147.36, 119.53 172.35, 115.38 186.50 C 124.63 183.35, 134.66 176.85, 144.13 172.88 C 168.32 162.72, 193.85 157.33, 220.00 157.37 C 225.90 157.38, 231.05 156.82, 236.62 158.50 C 229.78 162.46, 220.99 164.67, 213.49 167.84 C 199.93 173.58, 186.33 180.41, 173.87 188.27 C 121.03 221.59, 89.83 271.47, 81.29 333.24 C 80.08 342.05, 77.73 356.13, 79.12 364.50 C 88.24 355.86, 96.27 341.76, 105.10 331.80 C 121.31 313.52, 157.32 288.76, 180.88 282.00 C 176.72 287.85, 171.74 291.67, 167.03 296.95 C 157.24 307.93, 147.46 320.05, 139.66 332.56 C 110.64 379.03, 102.12 432.35, 115.37 485.30 C 117.81 495.04, 121.81 509.94, 127.62 517.75 C 129.90 511.53, 129.42 504.29, 130.46 497.54 C 133.28 479.29, 145.83 448.29, 159.88 436.50 C 160.49 443.45, 158.91 451.02, 158.22 457.99 C 157.10 469.40, 157.01 481.56, 158.27 492.96 C 166.11 563.92, 213.02 616.31, 275.38 647.25 C 272.80 641.04, 265.08 634.02, 260.73 627.86 C 251.99 615.48, 244.50 602.31, 238.59 588.35 C 232.94 575.02, 230.44 559.88, 228.94 545.65 C 224.23 500.97, 235.21 459.13, 258.35 420.77 C 264.81 410.06, 272.14 398.42, 280.88 389.50 C 281.69 400.26, 277.94 413.67, 277.16 424.77 C 275.74 445.03, 285.67 480.30, 312.71 473.93 C 323.41 471.40, 329.53 462.13, 332.28 452.08 C 336.85 435.40, 328.78 415.70, 325.25 399.36 C 312.39 339.88, 329.68 294.50, 371.04 251.04 C 381.97 239.56, 413.08 212.40, 427.88 209.50 C 425.18 225.36, 420.49 239.17, 419.36 255.71 C 416.88 291.73, 438.29 343.01, 464.62 367.25 C 475.89 344.84, 484.50 325.63, 514.03 328.22 C 521.90 328.90, 526.70 329.24, 533.38 333.75 C 524.43 342.68, 518.58 346.55, 514.52 359.46 C 507.89 380.54, 524.24 418.81, 546.59 423.82 C 567.01 428.40, 617.35 411.02, 632.75 397.26 C 640.32 390.50, 646.93 377.01, 647.24 366.74 C 647.73 350.50, 627.76 346.24, 618.78 336.41 C 613.35 330.46, 612.67 324.56, 611.62 317.00 C 616.72 318.17, 621.06 321.18, 626.38 322.17 C 632.53 323.31, 640.47 321.88, 646.88 322.29 C 660.45 323.18, 668.10 328.95, 681.38 321.25 C 677.70 312.56, 671.19 308.78, 664.52 302.53 C 653.86 292.54, 643.45 282.23, 632.55 272.49 C 622.11 263.18, 610.38 254.13, 600.62 244.25 C 599.58 237.07, 602.51 229.52, 600.56 222.24 C 596.19 205.91, 558.98 179.92, 545.12 168.50 C 549.51 157.33, 555.47 150.37, 557.06 137.50 C 561.25 103.59, 535.97 68.63, 509.88 49.75 C 509.38 66.35, 518.79 85.73, 509.12 102.00 C 502.70 88.33, 497.04 75.80, 487.16 64.04 C 470.56 44.25, 437.23 26.56, 411.38 24.25 C 413.89 28.59, 416.47 30.49, 419.49 34.39 C 426.39 43.30, 437.76 60.74, 437.88 71.75 Z
+    M 570.88 282.50 C 560.78 277.54, 552.55 268.03, 542.25 263.23 C 533.09 258.97, 525.95 260.70, 517.06 258.76 C 502.42 255.57, 490.84 243.03, 479.62 233.75 C 490.99 229.16, 530.17 228.04, 540.35 235.50 C 546.54 240.03, 567.66 274.45, 570.88 282.50 Z
+    M 427.62 161.25 C 421.58 165.94, 408.44 172.80, 401.12 175.50 C 391.99 170.27, 380.91 162.10, 369.83 161.53 C 366.21 161.34, 362.39 163.07, 359.73 165.43 C 348.12 175.74, 354.74 198.60, 359.12 211.00 C 355.75 218.26, 351.21 224.79, 345.88 230.75 C 334.19 211.71, 313.81 148.11, 341.39 134.63 C 354.61 128.17, 376.68 136.35, 389.38 141.46 C 401.35 146.27, 418.07 152.90, 427.62 161.25 Z
+  "/>
+    </symbol>
+  </svg>
+
+  <!-- ==================== SEAMLESS HEADER CONTROLLER ==================== -->
+  <header class="sticky top-0 z-40 bg-white/85 dark:bg-[#070709]/85 backdrop-blur-2xl border-b border-zinc-200/80 dark:border-white/[0.05] transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-3">
+      
+      <!-- Brand Logo (Black "LION" in Default Day Mode, White "LION" in Dark Mode + Gold "habits") -->
+      <button type="button" onclick="switchTab('home')" class="flex items-center gap-3 text-left group focus:outline-none shrink-0">
+        <div class="relative w-12 h-12 rounded-full bg-amber-500/10 dark:bg-gradient-to-br dark:from-amber-500/15 dark:via-amber-500/5 dark:to-transparent border border-amber-500/35 flex items-center justify-center shadow-[0_0_20px_rgba(245,158,11,0.16)] group-hover:border-amber-500 transition-all">
+          <svg class="w-8 h-8 drop-shadow-[0_0_8px_rgba(212,175,55,0.45)] group-hover:scale-105 transition-transform" aria-label="LIONhabits Logo">
+            <use href="#custom-lion-vector"></use>
+          </svg>
+        </div>
+        <div class="flex flex-col justify-center">
+          <div class="text-xl sm:text-2xl tracking-tight leading-none flex items-baseline">
+            <span class="font-black text-zinc-950 dark:text-white transition-colors">LION</span><span class="font-semibold text-amber-600 dark:text-amber-400">habits</span>
+          </div>
+          <span class="text-[10px] font-medium tracking-[0.28em] text-zinc-500 dark:text-zinc-400 uppercase mt-1 block">
+            ai tracker
+          </span>
+        </div>
+      </button>
+
+      <!-- Center Navigation -->
+      <nav class="hidden lg:flex items-center gap-1.5 bg-zinc-100/90 dark:bg-zinc-900/80 border border-zinc-200 dark:border-white/[0.07] p-1.5 rounded-full shadow-inner" aria-label="Main Navigation">
+        <button type="button" data-tab="home" onclick="switchTab('home')" class="tab-btn px-5 py-2 rounded-full text-sm font-bold transition bg-amber-500 text-zinc-950 shadow-sm" data-i18n="nav_home">
+          Home
+        </button>
+        <button type="button" data-tab="tracker" onclick="switchTab('tracker')" class="tab-btn px-5 py-2 rounded-full text-sm font-semibold text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-white transition flex items-center gap-2">
+          <span data-i18n="nav_tracker">Your Plan</span>
+          <span id="header-pct-badge" class="text-[11px] px-2.5 py-0.5 rounded-full bg-white dark:bg-zinc-800 text-amber-600 dark:text-amber-400 font-bold border border-zinc-200 dark:border-transparent">0%</span>
+        </button>
+        <button type="button" data-tab="mentor" onclick="switchTab('mentor')" class="tab-btn px-5 py-2 rounded-full text-sm font-semibold text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-white transition" data-i18n="nav_mentor">
+          AI Mentor
+        </button>
+        <button type="button" data-tab="partner" onclick="switchTab('partner')" class="tab-btn px-5 py-2 rounded-full text-sm font-semibold text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-white transition" data-i18n="nav_partner">
+          Partner (50%)
+        </button>
+      </nav>
+
+      <!-- Right Controls: Modern Rounded Pill Day/Night Switch + Language (KA/EN) + Auth -->
+      <div class="flex items-center gap-2 sm:gap-2.5 shrink-0">
+        <!-- Modern Rounded Pill Day / Night Switcher -->
+        <button type="button" id="theme-toggle-btn" onclick="toggleTheme()" role="switch" aria-checked="false" aria-label="Toggle Day/Night Mode" class="relative inline-flex items-center justify-between w-[74px] h-10 p-1 rounded-full bg-zinc-100 dark:bg-zinc-900/95 border border-zinc-200/90 dark:border-amber-500/25 shadow-inner transition-colors duration-300 focus:outline-none">
+          <!-- Sliding Golden Capsule -->
+          <span id="theme-switch-pill" class="absolute left-1 top-1 w-8 h-8 rounded-full bg-gradient-to-br from-amber-300 via-amber-400 to-amber-500 shadow-[0_2px_10px_rgba(245,158,11,0.45)] transition-transform duration-300 ease-out translate-x-0"></span>
+          <!-- Sun Vector Icon -->
+          <span class="relative z-10 w-8 h-8 rounded-full flex items-center justify-center">
+            <svg id="icon-sun" class="w-4 h-4 text-zinc-950 transition-colors duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+            </svg>
+          </span>
+          <!-- Moon Vector Icon -->
+          <span class="relative z-10 w-8 h-8 rounded-full flex items-center justify-center">
+            <svg id="icon-moon" class="w-4 h-4 text-zinc-500 transition-colors duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            </svg>
+          </span>
+        </button>
+
+        
+
+        <span id="pro-active-pill" class="hidden items-center gap-1 px-3.5 py-1.5 rounded-full text-xs font-black bg-amber-500/15 text-amber-700 dark:text-amber-300 border border-amber-500/40">
+          ⚡ PRO
+        </span>
+
+        <button type="button" onclick="openAuthModal()" class="flex items-center gap-2 px-4 py-2.5 rounded-full bg-zinc-100 dark:bg-zinc-900/90 hover:bg-zinc-200 dark:hover:bg-zinc-800 border border-zinc-200 dark:border-white/10 text-xs sm:text-sm font-bold text-zinc-900 dark:text-zinc-100 transition">
+          <span class="text-amber-600 dark:text-amber-400">👤</span>
+          <span id="header-auth-text" data-i18n="btn_login">Sign In</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Tab Bar -->
+    <div class="lg:hidden grid grid-cols-4 gap-1.5 px-3 py-2 bg-white/95 dark:bg-[#070709]/95 border-t border-zinc-200/80 dark:border-white/[0.05]">
+      <button type="button" data-tab="home" onclick="switchTab('home')" class="tab-btn py-2 rounded-full text-xs font-bold bg-amber-500 text-zinc-950 text-center truncate px-2" data-i18n="nav_home">Home</button>
+      <button type="button" data-tab="tracker" onclick="switchTab('tracker')" class="tab-btn py-2 rounded-full text-xs font-semibold text-zinc-600 dark:text-zinc-400 text-center truncate px-2" data-i18n="nav_tracker_short">Your Plan</button>
+      <button type="button" data-tab="mentor" onclick="switchTab('mentor')" class="tab-btn py-2 rounded-full text-xs font-semibold text-zinc-600 dark:text-zinc-400 text-center truncate px-2" data-i18n="nav_mentor">AI Mentor</button>
+      <button type="button" data-tab="partner" onclick="switchTab('partner')" class="tab-btn py-2 rounded-full text-xs font-semibold text-zinc-600 dark:text-zinc-400 text-center truncate px-2" data-i18n="nav_partner_short">50% Partner</button>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main class="flex-1 w-full max-w-full overflow-x-hidden">
+
+    <!-- ==================== VIEW 1: HOMEPAGE ==================== -->
+    <section id="section-home" class="view-panel block">
+      
+      <!-- Hero Container -->
+      <div class="relative overflow-hidden pt-4 sm:pt-8 pb-14 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="pointer-events-none absolute -top-10 left-0 w-[500px] h-[500px] bg-amber-500/12 rounded-full blur-[140px]"></div>
+        <div class="pointer-events-none absolute top-1/4 right-0 w-[420px] h-[420px] bg-orange-500/10 rounded-full blur-[140px]"></div>
+
+        <div class="relative z-20 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
+          
+          <!-- Left Visual -->
+          <div class="lg:col-span-6 flex flex-col">
+            <div class="relative flex-1 min-h-[420px] sm:min-h-[500px] w-full rounded-[32px] overflow-hidden border border-amber-500/30 shadow-[0_25px_70px_-15px_rgba(245,158,11,0.2)] bg-zinc-900 dark:bg-[#0b0b0f] group flex items-center justify-center">
+              <img 
+                src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=1200&q=85" 
+                alt="LIONhabits Visual" 
+                draggable="false"
+                class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105 pointer-events-none"
+                onerror="this.classList.add('hidden'); document.getElementById('hero-fallback-vector').classList.remove('hidden');"
+              />
+              <div id="hero-fallback-vector" class="hidden flex-col items-center justify-center p-12 text-center">
+                <svg class="w-44 h-44 drop-shadow-[0_0_35px_rgba(245,158,11,0.45)]">
+                  <use href="#custom-lion-vector"></use>
+                </svg>
+              </div>
+
+              <div class="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-black/70 via-black/20 to-transparent"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+              <div class="absolute inset-0 bg-gradient-to-tr from-amber-500/15 via-transparent to-amber-300/5"></div>
+
+              <span class="ember-dot w-1.5 h-1.5 left-[16%] bottom-[28%]" style="animation-duration: 3.4s;"></span>
+              <span class="ember-dot w-2 h-2 left-[78%] bottom-[34%]" style="animation-duration: 4.2s; animation-delay: 0.7s;"></span>
+              <span class="ember-dot w-1.5 h-1.5 left-[64%] top-[24%]" style="animation-duration: 3.8s; animation-delay: 1.2s;"></span>
+
+              <div class="absolute bottom-5 left-5 right-5 backdrop-blur-xl bg-white/90 dark:bg-zinc-950/80 border border-amber-500/35 rounded-full px-5 py-3.5 flex items-center justify-between gap-4 shadow-2xl">
+                <div class="flex items-center gap-3.5">
+                  <div class="w-10 h-10 rounded-full bg-amber-500/15 border border-amber-500/40 flex items-center justify-center shrink-0">
+                    <svg class="w-6 h-6">
+                      <use href="#custom-lion-vector"></use>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="flex items-center gap-2">
+                      <span class="text-sm font-black tracking-wide text-zinc-950 dark:text-white">LIONhabits</span>
+                      <span class="text-[10px] uppercase tracking-widest text-amber-600 dark:text-amber-400 font-semibold">ai tracker</span>
+                    </div>
+                    <p class="text-xs text-zinc-600 dark:text-zinc-300 mt-0.5" data-i18n="hero_card_sub">Full Control Discipline System</p>
+                  </div>
+                </div>
+                <span class="px-3.5 py-1.5 text-[11px] font-black rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-zinc-950 shadow-sm shrink-0">
+                  PRO AI
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Typography & CTAs -->
+          <div class="lg:col-span-6 flex flex-col justify-between space-y-6">
+            <div class="space-y-5">
+              <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-amber-500/10 dark:bg-zinc-900/90 border border-amber-500/35 text-amber-700 dark:text-amber-300 text-xs sm:text-sm font-semibold">
+                <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+                <span data-i18n="hero_badge">Personal AI Mentor & Discipline System</span>
+              </div>
+
+              <h1 class="text-3xl sm:text-5xl lg:text-[52px] font-black tracking-tight text-zinc-950 dark:text-white leading-[1.15]">
+                <span data-i18n="hero_title_1">Take</span>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-amber-500 to-orange-600 dark:from-amber-300 dark:via-amber-400 dark:to-orange-500" data-i18n="hero_title_highlight"> Full Control </span>
+                <span data-i18n="hero_title_2">Of Your Discipline</span>
+              </h1>
+
+              <p class="text-sm sm:text-base lg:text-lg text-zinc-600 dark:text-zinc-300 leading-relaxed" data-i18n="hero_desc">
+                Structured digital programs with actionable explanations, daily accountability, and your AI mentor lioncouch.
+              </p>
+            </div>
+
+            <!-- Quote Callout Card -->
+            <div class="relative rounded-[28px] bg-amber-50/70 dark:bg-gradient-to-r dark:from-zinc-900/95 dark:via-zinc-900/80 dark:to-amber-950/20 border border-amber-500/35 p-5 sm:p-6 shadow-sm">
+              <div class="grid grid-cols-1 sm:grid-cols-12 gap-4 items-center">
+                <div class="sm:col-span-9 space-y-2">
+                  <div class="flex items-center gap-2 text-amber-600 dark:text-amber-400 text-xs font-extrabold uppercase tracking-widest">
+                    <span>❝</span>
+                    <span data-i18n="quote_label">Daily Discipline Quote</span>
+                  </div>
+                  <blockquote class="text-sm sm:text-base font-semibold text-zinc-900 dark:text-zinc-100 leading-relaxed" data-i18n="quote_text">
+                    “Discipline is choosing between what you want now and what you want most.”
+                  </blockquote>
+                </div>
+                <div class="sm:col-span-3 sm:border-l border-amber-500/25 dark:border-zinc-800 sm:pl-4 flex sm:flex-col justify-between sm:justify-center items-center sm:items-end text-right">
+                  <span class="text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider">LION CODE</span>
+                  <span class="text-[11px] text-zinc-500 dark:text-zinc-400 mt-1" data-i18n="quote_author">Iron Standard</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="space-y-4 pt-1">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                <button type="button" onclick="switchTab('tracker')" class="w-full py-4 px-6 rounded-full font-extrabold text-sm sm:text-base text-zinc-950 bg-gradient-to-r from-amber-400 via-amber-500 to-orange-500 hover:brightness-110 shadow-[0_10px_30px_rgba(245,158,11,0.28)] transition text-center" data-i18n="btn_start_plan">
+                  Your Plan
+                </button>
+                <button type="button" onclick="openCheckout('LION PRO — BLACK FRIDAY', 9)" class="w-full py-4 px-6 rounded-full font-extrabold text-sm sm:text-base bg-zinc-950 text-white hover:bg-zinc-800 dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200 shadow-lg transition text-center" data-i18n="btn_pro_access">
+                  Black Friday — $9/mo
+                </button>
+              </div>
+              <button type="button" onclick="goToMentorForPlan()" class="w-full py-3.5 px-6 rounded-full font-extrabold text-sm sm:text-base text-amber-700 dark:text-amber-300 bg-amber-500/12 hover:bg-amber-500/20 border border-amber-500/40 hover:border-amber-500 transition flex items-center justify-center gap-2" data-i18n="btn_generate_plan">
+                ✨ Generate Personal Plan
+              </button>
+
+              <!-- 3-Column Metrics Bar -->
+              <div class="grid grid-cols-3 gap-3 pt-4 border-t border-zinc-200 dark:border-zinc-800/80 text-center">
+                <div class="p-3 rounded-3xl bg-white dark:bg-zinc-900/50 border border-zinc-200/80 dark:border-white/[0.04]">
+                  <div class="text-lg sm:text-xl font-black text-amber-600 dark:text-amber-400" data-i18n="stat_1_val">1 Free Plan</div>
+                  <div class="text-[11px] text-zinc-500 dark:text-zinc-400 font-medium mt-0.5" data-i18n="stat_1_lbl">Free Start</div>
+                </div>
+                <div class="p-3 rounded-3xl bg-white dark:bg-zinc-900/50 border border-zinc-200/80 dark:border-white/[0.04]">
+                  <div class="text-lg sm:text-xl font-black text-zinc-950 dark:text-white">24/7 AI</div>
+                  <div class="text-[11px] text-zinc-500 dark:text-zinc-400 font-medium mt-0.5" data-i18n="stat_2_lbl">lioncouch AI Coach</div>
+                </div>
+                <div class="p-3 rounded-3xl bg-white dark:bg-zinc-900/50 border border-zinc-200/80 dark:border-white/[0.04]">
+                  <div class="text-lg sm:text-xl font-black text-amber-600 dark:text-amber-400">50%</div>
+                  <div class="text-[11px] text-zinc-500 dark:text-zinc-400 font-medium mt-0.5" data-i18n="stat_3_lbl">Affiliate Commission</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ==================== PRICING SECTION ==================== -->
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 border-t border-zinc-200 dark:border-zinc-900">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="text-xs font-extrabold uppercase tracking-widest text-amber-600 dark:text-amber-400" data-i18n="pricing_badge">SUBSCRIPTION PLANS</span>
+          <h2 class="text-2xl sm:text-4xl font-black text-zinc-950 dark:text-white mt-2" data-i18n="pricing_title">Black Friday All-Access Pass</h2>
+          <p class="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 mt-2" data-i18n="pricing_sub">Your first 1 personal plan is free — unlock unlimited trackers, AI coaching, and every feature with our 14-day Black Friday offer.</p>
+        </div>
+
+        <div class="max-w-xl mx-auto">
+          <!-- Single Black Friday All-Access Package ($9 instead of $19 — 14 Days Only) -->
+          <div class="relative rounded-[32px] bg-gradient-to-b from-amber-50/90 via-white to-white dark:from-zinc-900 dark:via-zinc-900 dark:to-[#0b0b0f] border-2 border-amber-500 p-7 sm:p-10 shadow-[0_25px_60px_rgba(245,158,11,0.22)] flex flex-col justify-between">
+            <div class="absolute -top-4 left-1/2 -translate-x-1/2 px-5 py-1.5 rounded-full bg-zinc-950 text-white dark:bg-white dark:text-zinc-950 text-xs font-black uppercase tracking-wider shadow-lg whitespace-nowrap" data-i18n="bf_badge">
+              🔥 BLACK FRIDAY DEAL — 14 DAYS ONLY
+            </div>
+            <div>
+              <div class="flex items-center justify-between gap-2 mt-2">
+                <h3 class="text-2xl sm:text-3xl font-black text-zinc-950 dark:text-white">⚡ LION PRO — ALL ACCESS</h3>
+                <span class="px-3 py-1 rounded-full text-xs font-black bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 border border-emerald-500/35" data-i18n="bf_save_tag">
+                  -53% OFF
+                </span>
+              </div>
+              <p class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 mt-2" data-i18n="bf_plan_desc">
+                Full unlimited access to every single feature with our 14-day Black Friday offer.
+              </p>
+              <div class="my-7 flex items-baseline gap-3">
+                <span class="text-5xl sm:text-6xl font-black text-amber-600 dark:text-amber-400">$9</span>
+                <span class="text-2xl sm:text-3xl font-bold text-zinc-400 dark:text-zinc-500 line-through">$19</span>
+                <span class="text-sm font-semibold text-zinc-500 dark:text-zinc-400" data-i18n="per_month">/ month</span>
+              </div>
+              <ul class="space-y-3.5 text-sm sm:text-base text-zinc-800 dark:text-zinc-200 mb-8 font-medium">
+                <li class="flex items-center gap-3"><span class="w-5 h-5 rounded-full bg-amber-500/20 text-amber-600 dark:text-amber-400 flex items-center justify-center text-xs font-black shrink-0">✓</span> <span data-i18n="bf_feat_1">Unlimited habit trackers & custom personal plans</span></li>
+                <li class="flex items-center gap-3"><span class="w-5 h-5 rounded-full bg-amber-500/20 text-amber-600 dark:text-amber-400 flex items-center justify-center text-xs font-black shrink-0">✓</span> <span data-i18n="bf_feat_2">Unlimited AI Mentor — lioncouch 24/7 support & live plan editing</span></li>
+                <li class="flex items-center gap-3"><span class="w-5 h-5 rounded-full bg-amber-500/20 text-amber-600 dark:text-amber-400 flex items-center justify-center text-xs font-black shrink-0">✓</span> <span data-i18n="bf_feat_3">All current and future updates & new features included</span></li>
+                <li class="flex items-center gap-3"><span class="w-5 h-5 rounded-full bg-amber-500/20 text-amber-600 dark:text-amber-400 flex items-center justify-center text-xs font-black shrink-0">✓</span> <span data-i18n="bf_feat_4">50% Partner Affiliate Link (also free upon sign-up)</span></li>
+              </ul>
+            </div>
+            <button type="button" onclick="openCheckout('LION PRO — BLACK FRIDAY', 9)" class="w-full py-4 rounded-full font-black text-base bg-zinc-950 text-white hover:bg-zinc-800 dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200 shadow-xl transition" data-i18n="bf_btn_buy">
+              ⚡ Claim Black Friday — $9 (Instead of $19)
+            </button>
+          </div>
+        </div>
+
+        <!-- ==================== PERSONAL DIGITAL PROGRAMS SECTION (EMPTY SLOTS) ==================== -->
+        <div id="digital-programs-section" class="mt-20 pt-14 border-t border-zinc-200 dark:border-zinc-900">
+          <div class="text-center max-w-2xl mx-auto mb-10">
+            <span class="inline-flex items-center gap-2 px-4 py-1 rounded-full text-xs font-extrabold uppercase tracking-widest bg-amber-500/12 text-amber-700 dark:text-amber-400 border border-amber-500/30" data-i18n="prog_badge">
+              PERSONAL DIGITAL PROGRAMS
+            </span>
+            <h2 class="text-2xl sm:text-4xl font-black text-zinc-950 dark:text-white mt-3" data-i18n="prog_title">პერსონალური ციფრული პროგრამები</h2>
+            <p class="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 mt-2" data-i18n="prog_sub">
+              სპეციალიზებული ციფრული პროგრამები — მალე დაემატება.
+            </p>
+          </div>
+
+          <div id="digital-programs-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto items-stretch"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== VIEW 2: STRUCTURED DIGITAL WORKSPACE TRACKER ==================== -->
+    <section id="section-tracker" class="view-panel hidden max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      
+      <!-- Document Cover & Header Card -->
+      <div class="rounded-[32px] bg-white dark:bg-zinc-900/90 border border-zinc-200 dark:border-zinc-800 overflow-hidden shadow-sm mb-8">
+        <!-- Subtle Golden Top Cover Strip -->
+        <div class="h-20 sm:h-24 w-full bg-gradient-to-r from-amber-500/20 via-amber-400/10 to-orange-500/15 border-b border-amber-500/20 relative">
+          <div class="absolute right-6 top-4 flex items-center gap-2">
+            <span class="px-3.5 py-1 rounded-full text-[11px] font-extrabold bg-white/85 dark:bg-zinc-950/80 text-amber-700 dark:text-amber-300 border border-amber-500/30 backdrop-blur-md">
+              LIONHABITS • DIGITAL WORKSPACE
+            </span>
+          </div>
+        </div>
+
+        <div class="px-6 sm:px-10 pb-8 -mt-9 relative">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+            <div>
+              <div id="tracker-plan-emoji" class="w-16 h-16 rounded-3xl bg-white dark:bg-zinc-950 border-2 border-amber-500/50 shadow-lg flex items-center justify-center text-3xl mb-4">
+                🦁
+              </div>
+              <h2 id="tracker-plan-title" class="text-2xl sm:text-4xl font-black text-zinc-950 dark:text-white tracking-tight" data-i18n="tracker_heading">
+                Your Plan
+              </h2>
+              <p id="tracker-plan-subtitle" class="text-sm text-zinc-600 dark:text-zinc-400 mt-1.5 max-w-2xl" data-i18n="tracker_subheading">
+                სტრუქტურირებული დისციპლინის სისტემა — მონიშნე დავალებები და წაიკითხე თითოეული ნაბიჯის განმარტება.
+              </p>
+            </div>
+
+            <!-- Properties Pill Bar -->
+            <div class="grid grid-cols-2 gap-3 shrink-0">
+              <div class="bg-zinc-50 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 rounded-3xl px-5 py-3 text-center">
+                <div id="tracker-total-pct" class="text-2xl font-black text-amber-600 dark:text-amber-400">0%</div>
+                <div class="text-[11px] text-zinc-500 dark:text-zinc-400 font-semibold uppercase" data-i18n="lbl_progress">პროგრესი</div>
+              </div>
+              <div class="bg-zinc-50 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 rounded-3xl px-5 py-3 text-center">
+                <div id="tracker-total-count" class="text-2xl font-black text-zinc-950 dark:text-white">0/21</div>
+                <div class="text-[11px] text-zinc-500 dark:text-zinc-400 font-semibold uppercase" data-i18n="lbl_completed">შესრულებული</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Callout Block: Program Overview / Philosophy -->
+          <div id="tracker-overview-callout" class="mt-6 p-4 sm:p-5 rounded-3xl bg-amber-50/75 dark:bg-amber-500/[0.07] border border-amber-500/30 flex items-start gap-3.5">
+            <span class="text-xl mt-0.5">💡</span>
+            <div class="space-y-1 flex-1">
+              <div class="text-xs font-extrabold uppercase tracking-wider text-amber-700 dark:text-amber-400" data-i18n="lbl_program_overview">
+                პროგრამის მთავარი იდეა და ინსტრუქცია
+              </div>
+              <p id="tracker-plan-overview-text" class="text-xs sm:text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed">
+                ეს პროგრამა აგებულია ყოველდღიური მიკრო-დისციპლინის პრინციპზე. შეასრულე თითოეული პუნქტი თანმიმდევრობით, გაეცანი ქვემოთ მოცემულ განმარტებებს და არ ჩააგდო არცერთი დღე.
+              </p>
+            </div>
+          </div>
+
+          <!-- Action Buttons & Progress Bar -->
+          <div class="mt-6 flex flex-wrap items-center justify-between gap-4">
+            <div class="flex flex-wrap items-center gap-2.5">
+              <button type="button" onclick="toggleManualBuilder()" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-extrabold text-xs sm:text-sm text-zinc-900 dark:text-white bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 border border-zinc-200 dark:border-zinc-700 hover:border-amber-500/50 transition" data-i18n="btn_build_custom_plan">
+                ✍️ ჩემი გეგმის აწყობა
+              </button>
+              <button type="button" onclick="goToMentorForPlan()" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-extrabold text-xs sm:text-sm text-zinc-950 bg-gradient-to-r from-amber-400 to-amber-500 hover:brightness-110 shadow-md transition" data-i18n="btn_generate_plan">
+                ✨ Generate Personal Plan (AI)
+              </button>
+            </div>
+          </div>
+
+          <div class="w-full h-3 bg-zinc-100 dark:bg-zinc-950 rounded-full overflow-hidden border border-zinc-200 dark:border-zinc-800 mt-5 p-0.5">
+            <div id="tracker-progress-bar" class="h-full bg-gradient-to-r from-amber-400 to-orange-500 rounded-full transition-all duration-300" style="width: 0%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== CUSTOM CHECKLIST BUILDER PANEL ==================== -->
+      <div id="manual-plan-builder" class="hidden rounded-[32px] bg-white dark:bg-zinc-900/95 border border-amber-500/45 p-6 sm:p-8 mb-8 shadow-xl">
+        <div class="flex items-center justify-between pb-4 mb-6 border-b border-zinc-200 dark:border-zinc-800">
+          <div>
+            <span class="text-xs font-extrabold uppercase tracking-wider text-amber-600 dark:text-amber-400" data-i18n="builder_badge">CUSTOM PLAN CREATOR</span>
+            <h3 class="text-lg sm:text-xl font-black text-zinc-950 dark:text-white mt-0.5" data-i18n="builder_title">შეადგინე შენი პირადი გეგმა</h3>
+          </div>
+          <button type="button" onclick="toggleManualBuilder()" class="w-9 h-9 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-white flex items-center justify-center">✕</button>
+        </div>
+
+        <form onsubmit="handleCreateManualPlan(event)" class="space-y-6">
+          <!-- Mode Selector: Fixed Days Slider (7-90) vs Infinite Mode -->
+          <div class="p-5 rounded-3xl bg-zinc-50 dark:bg-zinc-950 border border-amber-500/30 space-y-5">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <label class="text-xs font-extrabold uppercase tracking-wider text-amber-700 dark:text-amber-400" data-i18n="lbl_duration_mode">1. აირჩიე გეგმის ხანგრძლივობა</label>
+              <div class="grid grid-cols-2 gap-1.5 p-1 rounded-full bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800">
+                <button type="button" id="mode-fixed-btn" onclick="setBuilderDurationMode('fixed')" class="px-4 py-2 rounded-full text-xs font-extrabold bg-amber-500 text-zinc-950 transition" data-i18n="mode_fixed_days">
+                  📅 დღეების რაოდენობა
+                </button>
+                <button type="button" id="mode-infinite-btn" onclick="setBuilderDurationMode('infinite')" class="px-4 py-2 rounded-full text-xs font-bold text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-white transition" data-i18n="mode_infinite_days">
+                  ∞ უსასრულო (თვლის გარეშე)
+                </button>
+              </div>
+            </div>
+
+            <!-- 7 to 90 Days Smooth Slider -->
+            <div id="builder-fixed-controls" class="space-y-3 pt-1">
+              <div class="flex items-center justify-between">
+                <span class="text-xs text-zinc-600 dark:text-zinc-400 font-semibold" data-i18n="lbl_slide_days">გასწიე სლაიდერი (7 - 90 დღე):</span>
+                <span class="px-4 py-1 rounded-full bg-amber-500/15 border border-amber-500/40 text-amber-700 dark:text-amber-300 text-sm font-black">
+                  <span id="builder-days-display">21</span> <span data-i18n="day_word_plural">დღე</span>
+                </span>
+              </div>
+              <input id="builder-days-slider" type="range" min="7" max="90" value="21" oninput="updateBuilderSliderVal(this.value)" class="w-full lion-slider" />
+              <div class="flex justify-between text-[11px] text-zinc-400 font-bold px-1">
+                <span>7</span>
+                <span>21</span>
+                <span>45</span>
+                <span>60</span>
+                <span>90</span>
+              </div>
+            </div>
+
+            <!-- Infinite Mode Notice -->
+            <div id="builder-infinite-notice" class="hidden p-4 rounded-2xl bg-amber-500/10 border border-amber-500/25 text-xs text-amber-800 dark:text-amber-200 leading-relaxed" data-i18n="infinite_mode_desc">
+              ∞ უსასრულო რეჟიმში დღეები არ ითვლება — ყოველდღე გაქვს შენი მთავარი ჩეკლისტი და შეგიძლია განაახლო ნებისმიერ დროს.
+            </div>
+          </div>
+
+          <!-- Plan Title & Overview -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-zinc-700 dark:text-zinc-300 mb-2" data-i18n="lbl_plan_name">2. გეგმის სათაური</label>
+              <input id="builder-plan-name" type="text" maxlength="80" data-i18n-placeholder="ph_plan_name" placeholder="მაგ: ჩემი ყოველდღიური დისციპლინა" class="w-full bg-zinc-50 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 focus:border-amber-500 rounded-full px-5 py-3.5 text-sm text-zinc-950 dark:text-white outline-none" />
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-zinc-700 dark:text-zinc-300 mb-2" data-i18n="lbl_plan_overview_input">მოკლე განმარტება / მიზანი (არასავალდებულო)</label>
+              <input id="builder-plan-overview" type="text" maxlength="180" data-i18n-placeholder="ph_plan_overview" placeholder="მაგ: 21 დღე ფოკუსის, ენერგიის და რეჟიმის აღსადგენად" class="w-full bg-zinc-50 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 focus:border-amber-500 rounded-full px-5 py-3.5 text-sm text-zinc-950 dark:text-white outline-none" />
+            </div>
+          </div>
+
+          <!-- Individual Checklist Builder with Task + Explanation -->
+          <div>
+            <div class="flex items-center justify-between mb-2.5">
+              <label class="block text-xs font-bold text-zinc-700 dark:text-zinc-300" data-i18n="lbl_checklist_items">3. ჩამოწერე ყოველდღიური დავალებები და განმარტებები</label>
+              <button type="button" onclick="addBuilderChecklistRow()" class="text-xs font-extrabold text-amber-700 dark:text-amber-400 hover:opacity-80 px-3.5 py-1.5 rounded-full bg-amber-500/12 border border-amber-500/35 transition" data-i18n="btn_add_check_row">
+                + დავალების დამატება
+              </button>
+            </div>
+            <div id="builder-checklist-rows" class="space-y-3"></div>
+          </div>
+
+          <div class="flex justify-end gap-3 pt-2">
+            <button type="button" onclick="toggleManualBuilder()" class="px-6 py-3 rounded-full text-xs font-bold text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-white bg-zinc-100 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 transition" data-i18n="btn_cancel">
+              გაუქმება
+            </button>
+            <button type="submit" class="px-8 py-3.5 rounded-full text-xs sm:text-sm font-extrabold text-zinc-950 bg-gradient-to-r from-amber-400 to-amber-500 hover:brightness-110 shadow-lg transition" data-i18n="btn_save_custom_plan">
+              ✓ გეგმის შენახვა და დაწყება
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Day Tabs Header & Dynamic N-Day Controls -->
+      <div id="tracker-days-wrapper">
+        <div class="flex items-center justify-between mb-3">
+          <span id="tracker-days-count-badge" class="text-xs font-extrabold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">7 დღიანი გეგმა</span>
+          <div class="flex items-center gap-2">
+            <button type="button" onclick="addExtraDayToPlan()" class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-white dark:bg-zinc-900 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-amber-700 dark:text-amber-400 border border-zinc-200 dark:border-zinc-800 transition" data-i18n="btn_add_day">
+              + დღის დამატება
+            </button>
+            <button type="button" onclick="removeLastDayFromPlan()" class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-white dark:bg-zinc-900 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-500 dark:text-zinc-400 hover:text-red-500 border border-zinc-200 dark:border-zinc-800 transition" data-i18n="btn_remove_day">
+              − დღის წაშლა
+            </button>
+          </div>
+        </div>
+        <div id="days-tabs-grid" class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2.5 mb-8"></div>
+      </div>
+
+      <!-- Tasks & Guidance Symmetric Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <div class="lg:col-span-8 rounded-[32px] bg-white dark:bg-zinc-900/85 border border-zinc-200 dark:border-zinc-800 p-6 sm:p-8 shadow-sm">
+          <div class="flex flex-wrap items-center justify-between gap-3 pb-4 mb-5 border-b border-zinc-200 dark:border-zinc-800">
+            <div>
+              <span id="current-day-label" class="text-xs font-extrabold text-amber-600 dark:text-amber-400 uppercase tracking-wider">დღე 1</span>
+              <h3 id="current-day-title" class="text-xl font-black text-zinc-950 dark:text-white mt-0.5"></h3>
+            </div>
+            <div class="flex items-center gap-2">
+              <button id="btn-reset-infinite-day" type="button" onclick="resetCurrentDayChecks()" class="hidden px-4 py-1.5 rounded-full text-xs font-extrabold bg-amber-500/15 text-amber-700 dark:text-amber-300 border border-amber-500/35 hover:bg-amber-500 hover:text-zinc-950 transition" data-i18n="btn_new_day_reset">
+                ↻ ახალი დღის დაწყება
+              </button>
+              <span id="current-day-ratio" class="text-xs font-bold px-4 py-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 text-amber-700 dark:text-amber-300">0 / 3</span>
+            </div>
+          </div>
+
+          <!-- Rich Task Cards (Title + Explanation Note + Checkbox) -->
+          <div id="tasks-list-box" class="space-y-3.5"></div>
+
+          <!-- Add New Task + Optional Explanation Form -->
+          <form id="add-habit-form" onsubmit="handleAddCustomTask(event)" class="mt-6 pt-5 border-t border-zinc-200 dark:border-zinc-800 space-y-3">
+            <div class="flex flex-col sm:flex-row gap-3">
+              <input id="new-habit-input" type="text" maxlength="120" data-i18n-placeholder="ph_add_habit" placeholder="+ დავალების სათაური..." class="flex-1 bg-zinc-50 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 focus:border-amber-500 rounded-full px-5 py-3 text-sm text-zinc-950 dark:text-white outline-none" />
+              <label id="apply-all-days-wrapper" class="flex items-center gap-2 px-4 py-2.5 rounded-full bg-zinc-50 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 text-xs text-zinc-700 dark:text-zinc-300 cursor-pointer select-none shrink-0">
+                <input id="add-habit-all-days" type="checkbox" class="accent-amber-500 w-4 h-4 rounded-full" />
+                <span data-i18n="lbl_apply_all_days">ყველა დღეზე</span>
+              </label>
+              <button type="submit" class="px-6 py-3 rounded-full font-extrabold text-sm bg-amber-500 hover:bg-amber-400 text-zinc-950 transition shrink-0" data-i18n="btn_add">
+                დამატება
+              </button>
+            </div>
+            <input id="new-habit-note-input" type="text" maxlength="220" data-i18n-placeholder="ph_add_habit_note" placeholder="განმარტება / როგორ შევასრულოთ სწორად (არასავალდებულო)..." class="w-full bg-zinc-50 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 focus:border-amber-500 rounded-full px-5 py-2.5 text-xs text-zinc-700 dark:text-zinc-300 outline-none" />
+          </form>
+        </div>
+
+        <div class="lg:col-span-4 space-y-6">
+          <div class="rounded-[32px] bg-white dark:bg-zinc-900/85 border border-zinc-200 dark:border-zinc-800 p-6 shadow-sm">
+            <h4 class="text-xs font-extrabold text-amber-600 dark:text-amber-400 uppercase tracking-widest" data-i18n="lbl_daily_standard">დღის მთავარი ფოკუსი</h4>
+            <div id="current-day-standard" class="mt-3 p-4 rounded-3xl bg-amber-50/70 dark:bg-zinc-950 border border-amber-500/30 text-zinc-900 dark:text-zinc-100 font-semibold text-sm leading-relaxed"></div>
+          </div>
+
+          <div class="rounded-[32px] bg-white dark:bg-zinc-900/85 border border-zinc-200 dark:border-zinc-800 p-6 shadow-sm">
+            <h4 class="text-xs font-extrabold text-zinc-700 dark:text-zinc-300 uppercase tracking-widest" data-i18n="lbl_cloud_sync">ღრუბლოვანი სინქრონიზაცია</h4>
+            <p id="sync-status-label" class="text-xs text-zinc-500 dark:text-zinc-400 mt-2 leading-relaxed" data-i18n="sync_logged_out">
+              შედი ანგარიშში, რომ შენი პროგრესი მუდმივად შეინახოს ბაზაში.
+            </p>
+            <button type="button" onclick="handleResetTracker()" class="mt-4 w-full py-3 rounded-full text-xs font-bold text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-white bg-zinc-100 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 hover:border-amber-500/40 transition" data-i18n="btn_reset_progress">
+              პროგრესის განულება
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== VIEW 3: AI MENTOR (LIONCOUCH) ==================== -->
+    <section id="section-mentor" class="view-panel hidden max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div class="rounded-[32px] bg-white dark:bg-zinc-900/90 border border-zinc-200 dark:border-zinc-800 overflow-hidden shadow-xl">
+        <div class="p-5 sm:p-6 bg-zinc-50 dark:bg-zinc-950 border-b border-zinc-200 dark:border-zinc-800 flex items-center justify-between gap-4">
+          <div class="flex items-center gap-3.5">
+            <div class="w-12 h-12 rounded-full bg-amber-500/15 border border-amber-500/40 flex items-center justify-center shrink-0">
+              <svg class="w-7 h-7">
+                <use href="#custom-lion-vector"></use>
+              </svg>
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <h2 class="text-base sm:text-lg font-black text-zinc-950 dark:text-white">lioncouch</h2>
+                <span class="text-[10px] px-3 py-0.5 rounded-full bg-amber-500/20 text-amber-700 dark:text-amber-300 border border-amber-500/35 font-extrabold uppercase">ai program architect</span>
+              </div>
+              <p class="text-xs text-zinc-500 dark:text-zinc-400" data-i18n="mentor_sub">პირადი დისციპლინის AI მენტორი & პროგრამების გენერატორი</p>
+            </div>
+          </div>
+          <button type="button" onclick="openCheckout('LION PRO — BLACK FRIDAY', 9)" class="text-xs font-extrabold px-4 py-2.5 rounded-full bg-zinc-950 text-white hover:bg-zinc-800 dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200 transition" data-i18n="btn_pro_mode">
+            ⚡ PRO ($9 Black Friday)
+          </button>
+        </div>
+
+        <div id="chat-messages-box" class="h-[420px] overflow-y-auto p-5 sm:p-6 space-y-4 bg-zinc-50/60 dark:bg-[#09090c]"></div>
+
+        <form onsubmit="handleSendMentorMessage(event)" class="p-4 sm:p-5 bg-white dark:bg-zinc-950 border-t border-zinc-200 dark:border-zinc-800 flex gap-3">
+          <input id="mentor-text-input" type="text" data-i18n-placeholder="ph_mentor_input" placeholder="მიწერე lioncouch-ს შენი მიზანი (მაგ: შემიდგინე 21 დღიანი დისციპლინის სისტემა განმარტებებით)..." class="flex-1 bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 focus:border-amber-500 rounded-full px-5 py-3.5 text-sm text-zinc-950 dark:text-white outline-none" required />
+          <button id="mentor-send-btn" type="submit" class="px-7 py-3.5 rounded-full font-extrabold text-sm bg-gradient-to-r from-amber-400 to-amber-500 text-zinc-950 hover:brightness-110 disabled:opacity-50 transition" data-i18n="btn_send">
+            გაგზავნა
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ==================== VIEW 4: PARTNER / AFFILIATE (50%) ==================== -->
+    <section id="section-partner" class="view-panel hidden max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div class="rounded-[32px] bg-white dark:bg-zinc-900/85 border border-zinc-200 dark:border-zinc-800 p-6 sm:p-10 shadow-sm">
+        <span class="inline-block px-4 py-1 rounded-full text-xs font-extrabold bg-amber-500/15 text-amber-700 dark:text-amber-400 border border-amber-500/30" data-i18n="partner_badge">
+          CREATOR & TIKTOK AFFILIATE PROGRAM
+        </span>
+        <h2 class="text-2xl sm:text-4xl font-black text-zinc-950 dark:text-white mt-3" data-i18n="partner_title">გამოიმუშავე 50% ყოველი გაყიდვიდან</h2>
+        <p class="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 mt-2 max-w-2xl leading-relaxed" data-i18n="partner_desc">
+          განათავსე შენი პირადი რეფერალური ბმული TikTok-ის ბიოში. ყოველი მოწვეული მომხმარებლის გადახდიდან ($9) 50% ავტომატურად დაირიცხება შენს ბალანსზე.
+        </p>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-8 items-stretch">
+          <div class="lg:col-span-7 rounded-[28px] bg-zinc-50 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 p-6 flex flex-col justify-between">
+            <div>
+              <h3 class="text-base font-bold text-zinc-950 dark:text-white" data-i18n="partner_link_title">შენი პირადი პარტნიორული ლინკი</h3>
+              <p class="text-xs text-zinc-500 dark:text-zinc-400 mt-1" data-i18n="partner_link_sub">დააკოპირე და ჩასვი შენს TikTok ან Instagram პროფილში</p>
+
+              <div class="mt-4 flex items-center gap-2 bg-white dark:bg-zinc-900 border border-amber-500/45 rounded-full p-2">
+                <input id="partner-url-field" type="text" readonly class="flex-1 min-w-0 bg-transparent text-amber-700 dark:text-amber-300 text-xs sm:text-sm font-semibold px-3 outline-none" value="https://lionhabits.netlify.app/?aff=lion_partner" />
+                <button type="button" onclick="copyPartnerLink()" class="px-5 py-2.5 rounded-full bg-amber-500 hover:bg-amber-400 text-zinc-950 font-extrabold text-xs whitespace-nowrap transition" data-i18n="btn_copy">
+                  კოპირება
+                </button>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-3 gap-3 mt-6">
+              <div class="rounded-3xl bg-white dark:bg-zinc-900/90 border border-zinc-200 dark:border-zinc-800 p-4 text-center">
+                <div id="partner-refs-num" class="text-2xl font-black text-zinc-950 dark:text-white">0</div>
+                <div class="text-[11px] text-zinc-500 dark:text-zinc-400 font-semibold mt-1" data-i18n="lbl_referrals">მოწვეული</div>
+              </div>
+              <div class="rounded-3xl bg-white dark:bg-zinc-900/90 border border-zinc-200 dark:border-zinc-800 p-4 text-center">
+                <div class="text-2xl font-black text-amber-600 dark:text-amber-400">50%</div>
+                <div class="text-[11px] text-zinc-500 dark:text-zinc-400 font-semibold mt-1" data-i18n="lbl_commission">საკომისიო</div>
+              </div>
+              <div class="rounded-3xl bg-white dark:bg-zinc-900/90 border border-zinc-200 dark:border-zinc-800 p-4 text-center">
+                <div id="partner-balance-num" class="text-2xl font-black text-emerald-600 dark:text-emerald-400">$0.00</div>
+                <div class="text-[11px] text-zinc-500 dark:text-zinc-400 font-semibold mt-1" data-i18n="lbl_balance">ბალანსი</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 rounded-[28px] bg-zinc-50 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 p-6 flex flex-col justify-between">
+            <div>
+              <h3 id="partner-lock-heading" class="text-base font-bold text-zinc-950 dark:text-white" data-i18n="partner_lock_title">პარტნიორის ანგარიშის დაცვა</h3>
+              <p id="partner-lock-text" class="text-xs text-zinc-500 dark:text-zinc-400 mt-2 leading-relaxed" data-i18n="partner_lock_desc">
+                იმისათვის, რომ შენი უნიკალური კოდი და დაგროვილი 50%-იანი ბალანსი მუდმივად შეინახოს მონაცემთა ბაზაში, გაიარე ავტორიზაცია.
+              </p>
+            </div>
+            <button id="partner-auth-btn" type="button" onclick="openAuthModal()" class="mt-6 w-full py-3.5 rounded-full font-extrabold text-sm bg-gradient-to-r from-amber-400 to-amber-500 text-zinc-950 hover:brightness-110 transition" data-i18n="btn_auth_partner">
+              👤 ანგარიშში შესვლა / რეგისტრაცია
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="border-t border-zinc-200 dark:border-zinc-900 bg-white dark:bg-[#050507] py-8 px-4 sm:px-6 lg:px-8 mt-12 transition-colors">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
+      <div class="flex items-center gap-3">
+        <svg class="w-6 h-6"><use href="#custom-lion-vector"></use></svg>
+        <div class="flex items-baseline gap-1.5">
+          <span class="font-black text-zinc-950 dark:text-white">LION</span><span class="font-semibold text-amber-600 dark:text-amber-400">habits</span>
+          <span class="text-[10px] tracking-[0.22em] uppercase text-zinc-400 ml-1">ai tracker</span>
+        </div>
+      </div>
+      <div data-i18n="footer_rights">© 2026 LIONhabits — ai tracker. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- ==================== AUTH MODAL ==================== -->
+  <div id="modal-auth" role="dialog" aria-modal="true" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/70 backdrop-blur-md p-4" onclick="if(event.target===this) closeAuthModal()">
+    <div class="relative w-full max-w-md rounded-[32px] bg-white dark:bg-zinc-900 border border-amber-500/50 p-7 shadow-2xl">
+      <button type="button" onclick="closeAuthModal()" class="absolute top-5 right-5 w-9 h-9 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-white flex items-center justify-center" aria-label="Close">✕</button>
+      
+      <div class="flex items-center gap-2.5 mb-3">
+        <svg class="w-6 h-6"><use href="#custom-lion-vector"></use></svg>
+        <span class="text-xs font-extrabold uppercase tracking-wider text-amber-600 dark:text-amber-400">LIONhabits • ai tracker</span>
+      </div>
+      <h3 class="text-2xl font-black text-zinc-950 dark:text-white" data-i18n="auth_modal_title">რეგისტრაცია / შესვლა</h3>
+      <p id="auth-modal-desc" class="text-xs text-zinc-500 dark:text-zinc-400 mt-1 mb-5" data-i18n="auth_modal_sub">
+        შედი ანგარიშში PRO წვდომის გასააქტიურებლად და პროგრესის შესანახად.
+      </p>
+
+      <div id="auth-user-panel" class="hidden space-y-4">
+        <div class="p-4 rounded-3xl bg-zinc-50 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 flex items-center justify-between">
+          <div>
+            <div class="text-[11px] text-zinc-500 font-bold uppercase" data-i18n="lbl_active_user">აქტიური მომხმარებელი</div>
+            <div id="auth-user-email" class="text-sm font-bold text-zinc-950 dark:text-white mt-0.5"></div>
+          </div>
+          <span id="auth-user-badge" class="px-3 py-1 rounded-full text-xs font-extrabold bg-amber-500/20 text-amber-700 dark:text-amber-300">STANDARD</span>
+        </div>
+        <button type="button" onclick="handleSignOut()" class="w-full py-3.5 rounded-full font-bold text-sm bg-red-500/15 text-red-600 dark:text-red-400 border border-red-500/30 hover:bg-red-500/25 transition" data-i18n="btn_logout">
+          ანგარიშიდან გასვლა
+        </button>
+      </div>
+
+      <form id="auth-form" onsubmit="submitSupabaseAuth(event)" class="space-y-4">
+        <div class="grid grid-cols-2 gap-1.5 p-1 rounded-full bg-zinc-100 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800">
+          <button type="button" id="auth-mode-signin" onclick="setAuthMode('signin')" class="py-2 rounded-full text-xs font-extrabold bg-amber-500 text-zinc-950 transition" data-i18n="mode_signin">
+            შესვლა
+          </button>
+          <button type="button" id="auth-mode-signup" onclick="setAuthMode('signup')" class="py-2 rounded-full text-xs font-extrabold text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-white transition" data-i18n="mode_signup">
+            რეგისტრაცია
+          </button>
+        </div>
+
+        <div>
+          <label for="input-auth-email" class="block text-xs font-bold text-zinc-700 dark:text-zinc-300 mb-1.5" data-i18n="lbl_email">ელ-ფოსტა (Email)</label>
+          <input id="input-auth-email" type="email" required placeholder="name@example.com" class="w-full bg-zinc-50 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 focus:border-amber-500 rounded-full px-5 py-3.5 text-sm text-zinc-950 dark:text-white outline-none" />
+        </div>
+        <div>
+          <label for="input-auth-pass" class="block text-xs font-bold text-zinc-700 dark:text-zinc-300 mb-1.5" data-i18n="lbl_password">პაროლი (მინიმუმ 6 სიმბოლო)</label>
+          <input id="input-auth-pass" type="password" required minlength="6" placeholder="••••••••" class="w-full bg-zinc-50 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 focus:border-amber-500 rounded-full px-5 py-3.5 text-sm text-zinc-950 dark:text-white outline-none" />
+        </div>
+        <div id="auth-error-msg" class="hidden p-3.5 rounded-2xl bg-red-500/15 border border-red-500/30 text-xs text-red-600 dark:text-red-300 font-semibold"></div>
+        <button id="btn-auth-submit" type="submit" class="w-full py-3.5 rounded-full font-extrabold text-sm bg-gradient-to-r from-amber-400 to-amber-500 text-zinc-950 hover:brightness-110 disabled:opacity-50 shadow-lg transition" data-i18n="btn_continue">
+          გაგრძელება →
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== CHECKOUT MODAL ==================== -->
+  <div id="modal-checkout" role="dialog" aria-modal="true" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/70 backdrop-blur-md p-4" onclick="if(event.target===this) closeCheckoutModal()">
+    <div class="relative w-full max-w-md rounded-[32px] bg-white dark:bg-zinc-900 border border-amber-500 p-7 shadow-2xl max-h-[92vh] overflow-y-auto">
+      <button type="button" onclick="closeCheckoutModal()" class="absolute top-5 right-5 w-9 h-9 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-white flex items-center justify-center" aria-label="Close">✕</button>
+
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/15 text-amber-700 dark:text-amber-300 text-xs font-bold mb-3">
+        SECURE PAYPAL CHECKOUT
+      </div>
+      <h3 class="text-2xl font-black text-zinc-950 dark:text-white" data-i18n="checkout_title">გამოწერის გააქტიურება</h3>
+      <p class="text-xs text-zinc-500 dark:text-zinc-400 mt-1" data-i18n="checkout_sub">გადახდისთანავე გაგეხსნება სრული წვდომა და 50% დაერიცხება პარტნიორს.</p>
+
+      <div class="my-5 p-4 rounded-3xl bg-zinc-50 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 space-y-3">
+        <div class="flex items-center justify-between">
+          <div>
+            <div class="text-[11px] text-zinc-500 uppercase font-bold" data-i18n="lbl_selected_plan">არჩეული პაკეტი</div>
+            <div id="checkout-plan-name" class="text-base font-extrabold text-amber-600 dark:text-amber-300 mt-0.5">LION PRO</div>
+          </div>
+          <div id="checkout-plan-price" class="text-2xl font-black text-zinc-950 dark:text-white">$9.00</div>
+        </div>
+        <div class="pt-2.5 border-t border-zinc-200 dark:border-zinc-800/80 flex items-center justify-between text-xs">
+          <span class="text-zinc-500 dark:text-zinc-400" data-i18n="lbl_partner_bonus_info">პარტნიორის 50% საკომისიო:</span>
+          <span id="checkout-commission-preview" class="font-extrabold text-emerald-600 dark:text-emerald-400">$4.50</span>
+        </div>
+      </div>
+      <!-- Official PayPal Smart Payment Buttons Container -->
+      <div id="paypal-smart-wrapper" class="mb-3">
+        <div id="paypal-sdk-status" class="text-[11px] text-zinc-400 text-center mb-2" data-i18n="paypal_loading">
+          იტვირთება PayPal-ის დაცული გადახდის მოდული...
+        </div>
+        <div id="paypal-button-container" class="min-h-[44px]"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Banner -->
+  <div id="toast-msg" role="status" aria-live="polite" class="fixed bottom-6 right-6 z-50 px-5 py-3.5 rounded-full bg-white dark:bg-zinc-900 border border-amber-500 text-sm font-bold text-zinc-950 dark:text-white shadow-2xl opacity-0 translate-y-4 pointer-events-none transition-all duration-300"></div>
+
+  <!-- ==================== APPLICATION SCRIPT ==================== -->
+  <script>
+    // STRICT CONTENT PROTECTION: Block Copy, Selection, Context Menu, Print & Screenshot Shortcuts
+    function initContentProtection() {
+      document.addEventListener('contextmenu', (e) => {
+        e.preventDefault();
+        return false;
+      }, { capture: true });
+
+      document.addEventListener('dragstart', (e) => {
+        e.preventDefault();
+        return false;
+      }, { capture: true });
+
+      ['copy', 'cut'].forEach(evtName => {
+        document.addEventListener(evtName, (e) => {
+          const tag = (e.target && e.target.tagName || '').toUpperCase();
+          if (tag !== 'INPUT' && tag !== 'TEXTAREA') {
+            e.preventDefault();
+            if (e.clipboardData) {
+              try { e.clipboardData.setData('text/plain', ''); } catch (err) {}
+            }
+            return false;
+          }
+        }, { capture: true });
+      });
+
+      document.addEventListener('selectstart', (e) => {
+        const tag = (e.target && e.target.tagName || '').toUpperCase();
+        if (tag !== 'INPUT' && tag !== 'TEXTAREA') {
+          e.preventDefault();
+          return false;
+        }
+      }, { capture: true });
+
+      document.addEventListener('keydown', (e) => {
+        const key = (e.key || '').toLowerCase();
+        const isMetaOrCtrl = e.ctrlKey || e.metaKey;
+
+        // Block PrintScreen / Screenshot keys
+        if (e.key === 'PrintScreen' || e.keyCode === 44) {
+          e.preventDefault();
+          document.body.classList.add('screen-shield-active');
+          try { navigator.clipboard?.writeText(''); } catch (err) {}
+          setTimeout(() => document.body.classList.remove('screen-shield-active'), 1600);
+          return false;
+        }
+
+        // Block macOS screenshot shortcuts (Cmd+Shift+3/4/5) & Windows Snipping (Win+Shift+S)
+        if ((e.metaKey || e.ctrlKey) && e.shiftKey && ['3', '4', '5', 's'].includes(key)) {
+          e.preventDefault();
+          document.body.classList.add('screen-shield-active');
+          setTimeout(() => document.body.classList.remove('screen-shield-active'), 1600);
+          return false;
+        }
+
+        // Block Ctrl/Cmd + C, X, U, S, P, A (outside input/textarea)
+        const tag = (e.target && e.target.tagName || '').toUpperCase();
+        const isEditable = tag === 'INPUT' || tag === 'TEXTAREA';
+        if (isMetaOrCtrl && !isEditable && ['c', 'x', 'u', 's', 'p', 'a'].includes(key)) {
+          e.preventDefault();
+          return false;
+        }
+
+        // Block F12 & DevTools shortcuts
+        if (e.key === 'F12' || (isMetaOrCtrl && e.shiftKey && ['i', 'j', 'c'].includes(key))) {
+          e.preventDefault();
+          return false;
+        }
+      }, { capture: true });
+
+      // Blur screen shield when window loses focus (e.g. external screen capture tool invoked)
+      window.addEventListener('blur', () => {
+        document.body.classList.add('screen-shield-active');
+      });
+      window.addEventListener('focus', () => {
+        document.body.classList.remove('screen-shield-active');
+      });
+    }
+
+    function safeGetStorage(key, fallback = null) {
+      try {
+        const val = window.localStorage.getItem(key);
+        return val !== null ? val : fallback;
+      } catch (e) {
+        return fallback;
+      }
+    }
+
+    function safeSetStorage(key, value) {
+      try {
+        window.localStorage.setItem(key, value);
+      } catch (e) {}
+    }
+
+    // 2. SUPABASE & PAYPAL CONFIGURATION
+    const SUPABASE_URL = "https://peeaqfyijmkoorqyyzwd.supabase.co";
+    const SUPABASE_ANON_KEY = "sb_publishable_9TsX7rRSkJ8iNT4T7aXGBg_i-WwlLtx";
+    // ჩასვი შენი რეალური Live PayPal Client ID (developer.paypal.com -> Apps & Credentials -> Live)
+    const PAYPAL_CLIENT_ID = "BAANjvpdVOZPdJj4pjLozU1xQGRwHkBWrt6mmwMpJyI_vJFRucRW47DcboJen0RfDJKJIktiZYA3NM0CIQ";
+
+    const supabaseClient = (window.supabase && typeof window.supabase.createClient === 'function')
+      ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
+      : null;
+
+    const I18N = {
+      ka: {
+        nav_home: "მთავარი",
+        nav_tracker: "Your Plan",
+        nav_tracker_short: "Your Plan",
+        nav_mentor: "AI მენტორი",
+        nav_partner: "პარტნიორი (50%)",
+        nav_partner_short: "50% ბონუსი",
+        btn_login: "შესვლა",
+        mode_signin: "შესვლა",
+        mode_signup: "რეგისტრაცია",
+        hero_card_sub: "სრული კონტროლისა და დისციპლინის სისტემა",
+        hero_badge: "პირადი AI მენტორი & დისციპლინის სისტემა",
+        hero_title_1: "აიღე",
+        hero_title_highlight: " სრული კონტროლი ",
+        hero_title_2: "საკუთარ დისციპლინაზე",
+        hero_desc: "სტრუქტურირებული პროგრამები, განმარტებებითა და ყოველდღიური კონტროლით — პერსონალურ AI მენტორ lioncouch-თან ერთად.",
+        quote_label: "დღის მთავარი ციტატა",
+        quote_text: "„დისციპლინა არის არჩევანი იმას შორის, რაც გინდა ახლა და იმას შორის, რაც გინდა ყველაზე მეტად.“",
+        quote_author: "რკინის სტანდარტი",
+        btn_start_plan: "Your Plan",
+        btn_generate_plan: "✨ Generate Personal Plan (AI)",
+        btn_build_custom_plan: "✍️ ჩემი გეგმის აწყობა",
+        btn_pro_access: "AI მენტორი ($17)",
+        stat_1_val: "1 Free Plan",
+        stat_1_lbl: "უფასო სტარტი",
+        stat_2_lbl: "lioncouch მენტორი",
+        stat_3_lbl: "პარტნიორული ბონუსი",
+        pricing_badge: "SUBSCRIPTION PLANS",
+        pricing_title: "აირჩიე შენი დისციპლინის დონე",
+        pricing_sub: "პირველი 1 პირადი გეგმა სრულიად უფასოა — მეტი გეგმებისა და AI მხარდაჭერისთვის აირჩიე სასურველი პაკეტი.",
+        plan_popular: "პოპულარული",
+        plan_starter_desc: "ულიმიტო გეგმები + AI მხარდაჭერა",
+        per_month: "/ თვე",
+        feat_st_1: "ულიმიტო პირადი გეგმების შედგენა",
+        feat_st_2: "1 AI პროგრამის გენერირება თვეში",
+        feat_st_3: "AI მენტორის (lioncouch) მხარდაჭერა",
+        feat_st_4: "50%-იანი პარტნიორული რეფერალური ლინკი",
+        btn_buy_starter: "Starter-ის გააქტიურება ($7)",
+        plan_pro_desc: "AI მენტორი + 3 AI პროგრამა + ციფრული პროგრამები",
+        feat_pro_1: "ულიმიტო გეგმები + თვეში 3 AI პროგრამა",
+        feat_pro_2: "წვდომა ყველა პერსონალურ ციფრულ პროგრამაზე",
+        feat_pro_3: "AI მენტორი (lioncouch) 24/7 + Cloud Sync",
+        feat_pro_4: "50%-იანი პარტნიორული რეფერალური ლინკი",
+        btn_buy_pro: "PRO-ს გააქტიურება ($17)",
+        plan_vip_desc: "წლიური პაკეტი — 50%-ზე მეტი ეკონომია",
+        per_year: "/ წელი",
+        feat_vip_1: "ყველა PRO ფუნქცია 12 თვის განმავლობაში",
+        feat_vip_2: "ყველა არსებული და მომავალი ციფრული პროგრამა",
+        feat_vip_3: "$105-ის დაზოგვა წლიურ გამოწერაზე",
+        feat_vip_4: "VIP პარტნიორის სტატუსი და სწრაფი გატანა",
+        btn_buy_vip: "VIP წვდომა ($99 / წელი)",
+        prog_badge: "PERSONAL DIGITAL PROGRAMS",
+        prog_title: "პერსონალური ციფრული პროგრამები",
+        prog_sub: "სპეციალიზებული ციფრული პროგრამები — მალე დაემატება.",
+        prog_empty_slot: "მზა სლოტი — პროგრამა მალე დაემატება",
+        tracker_heading: "Your Plan",
+        tracker_subheading: "სტრუქტურირებული დისციპლინის სისტემა — მონიშნე დავალებები და წაიკითხე თითოეული ნაბიჯის განმარტება.",
+        lbl_program_overview: "პროგრამის მთავარი იდეა და ინსტრუქცია",
+        lbl_progress: "პროგრესი",
+        lbl_completed: "შესრულებული",
+        builder_badge: "CUSTOM PLAN CREATOR",
+        builder_title: "შეადგინე შენი პირადი გეგმა",
+        lbl_duration_mode: "1. აირჩიე გეგმის ხანგრძლივობა",
+        mode_fixed_days: "📅 დღეების რაოდენობა",
+        mode_infinite_days: "∞ უსასრულო (თვლის გარეშე)",
+        lbl_slide_days: "გასწიე სლაიდერი (7 - 90 დღე):",
+        day_word_plural: "დღე",
+        infinite_mode_desc: "∞ უსასრულო რეჟიმში დღეები არ ითვლება — ყოველდღე გაქვს შენი მთავარი ჩეკლისტი და შეგიძლია განაახლო ნებისმიერ დროს.",
+        lbl_plan_name: "2. გეგმის სათაური",
+        ph_plan_name: "მაგ: ჩემი ყოველდღიური დისციპლინა",
+        lbl_plan_overview_input: "მოკლე განმარტება / მიზანი (არასავალდებულო)",
+        ph_plan_overview: "მაგ: 21 დღე ფოკუსის, ენერგიის და რეჟიმის აღსადგენად",
+        lbl_checklist_items: "3. ჩამოწერე ყოველდღიური დავალებები და განმარტებები",
+        btn_add_check_row: "+ დავალების დამატება",
+        btn_cancel: "გაუქმება",
+        btn_save_custom_plan: "✓ გეგმის შენახვა და დაწყება",
+        btn_add_day: "+ დღის დამატება",
+        btn_remove_day: "− დღის წაშლა",
+        btn_new_day_reset: "↻ ახალი დღის დაწყება",
+        ph_add_habit: "+ დავალების სათაური...",
+        ph_add_habit_note: "განმარტება / როგორ შევასრულოთ სწორად (არასავალდებულო)...",
+        lbl_apply_all_days: "ყველა დღეზე",
+        btn_add: "დამატება",
+        lbl_daily_standard: "დღის მთავარი ფოკუსი",
+        lbl_cloud_sync: "ღრუბლოვანი სინქრონიზაცია",
+        sync_logged_out: "შედი ანგარიშში, რომ შენი პროგრესი მუდმივად შეინახოს ბაზაში.",
+        sync_logged_in: "✅ სინქრონიზებულია: ",
+        btn_reset_progress: "პროგრესის განულება",
+        empty_day_tasks: "ამ დღისთვის დავალებები ცარიელია. დაამატე ახალი ქვემოთ.",
+        mentor_sub: "პირადი დისციპლინის AI მენტორი & პროგრამების გენერატორი",
+        btn_pro_mode: "⚡ PRO რეჟიმი",
+        ph_mentor_input: "მიწერე lioncouch-ს შენი მიზანი (მაგ: შემიდგინე 21 დღიანი დისციპლინის სისტემა განმარტებებით)...",
+        btn_send: "გაგზავნა",
+        btn_apply_ai_plan: "⚡ გახსნა Your Plan-ში",
+        partner_badge: "CREATOR & TIKTOK AFFILIATE PROGRAM",
+        partner_title: "გამოიმუშავე 50% ყოველი გაყიდვიდან",
+        partner_desc: "განათავსე შენი პირადი რეფერალური ბმული TikTok-ის ბიოში. ყოველი მოწვეული მომხმარებლის გადახდიდან ($9) 50% ავტომატურად დაირიცხება შენს ბალანსზე.",
+        partner_link_title: "შენი პირადი პარტნიორული ლინკი",
+        partner_link_sub: "დააკოპირე და ჩასვი შენს TikTok ან Instagram პროფილში",
+        btn_copy: "კოპირება",
+        lbl_referrals: "მოწვეული",
+        lbl_commission: "საკომისიო",
+        lbl_balance: "ბალანსი",
+        partner_lock_title: "პარტნიორის ანგარიშის დაცვა",
+        partner_lock_desc: "იმისათვის, რომ შენი უნიკალური კოდი და დაგროვილი 50%-იანი ბალანსი მუდმივად შეინახოს მონაცემთა ბაზაში, გაიარე ავტორიზაცია.",
+        partner_unlocked_title: "✅ პარტნიორის ანგარიში აქტიურია",
+        partner_unlocked_desc: "შენი რეფერალური კოდი და 50%-იანი საკომისიო ბალანსი მიბმულია ანგარიშზე: ",
+        btn_auth_partner: "👤 ანგარიშში შესვლა / რეგისტრაცია",
+        btn_manage_account: "👤 ანგარიშის მართვა",
+        footer_rights: "© 2026 LIONhabits — ai tracker. ყველა უფლება დაცულია.",
+        auth_modal_title: "რეგისტრაცია / შესვლა",
+        auth_modal_sub: "შედი ანგარიშში PRO წვდომის გასააქტიურებლად და პროგრესის შესანახად.",
+        auth_checkout_req: "გადახდის გასაგრძელებლად ჯერ შექმენი ანგარიში ან შედი სისტემაში.",
+        lbl_active_user: "აქტიური მომხმარებელი",
+        btn_logout: "ანგარიშიდან გასვლა",
+        lbl_email: "ელ-ფოსტა (Email)",
+        lbl_password: "პაროლი (მინიმუმ 6 სიმბოლო)",
+        btn_continue: "გაგრძელება →",
+        checkout_title: "გამოწერის გააქტიურება",
+        checkout_sub: "გადახდისთანავე გაგეხსნება სრული წვდომა და 50% დაერიცხება პარტნიორს.",
+        lbl_selected_plan: "არჩეული პაკეტი",
+        lbl_partner_bonus_info: "პარტნიორის 50% საკომისიო:",
+        paypal_loading: "იტვირთება PayPal-ის დაცული გადახდის მოდული...",
+        paypal_ready: "✅ აირჩიე PayPal ან საბანკო ბარათი:",
+        day_word: "დღე",
+        done_word: "მზადაა"
+      },
+      en: {
+        nav_home: "Home",
+        nav_tracker: "Your Plan",
+        nav_tracker_short: "Your Plan",
+        nav_mentor: "AI Mentor",
+        nav_partner: "Partner (50%)",
+        nav_partner_short: "50% Partner",
+        btn_login: "Sign In",
+        mode_signin: "Sign In",
+        mode_signup: "Create Account",
+        hero_card_sub: "Full Control Discipline System",
+        hero_badge: "Personal AI Mentor & Discipline System",
+        hero_title_1: "Take",
+        hero_title_highlight: " Full Control ",
+        hero_title_2: "Of Your Discipline",
+        hero_desc: "Structured digital programs with actionable explanations, daily accountability, and your AI mentor lioncouch.",
+        quote_label: "Daily Discipline Quote",
+        quote_text: "“Discipline is choosing between what you want now and what you want most.”",
+        quote_author: "Iron Standard",
+        btn_start_plan: "Your Plan",
+        btn_generate_plan: "✨ Generate Personal Plan (AI)",
+        btn_build_custom_plan: "✍️ Build My Own Plan",
+        btn_pro_access: "Black Friday — $9/mo",
+        bf_badge: "🔥 BLACK FRIDAY DEAL — 14 DAYS ONLY",
+        bf_save_tag: "-53% OFF",
+        bf_plan_desc: "Full unlimited access to every single feature with our 14-day Black Friday offer.",
+        bf_feat_1: "Unlimited habit trackers & custom personal plans",
+        bf_feat_2: "Unlimited AI Mentor — lioncouch 24/7 support & live plan editing",
+        bf_feat_3: "All current and future updates & new features included",
+        bf_feat_4: "50% Partner Affiliate Link (also free upon sign-up)",
+        bf_btn_buy: "⚡ Claim Black Friday — $9 (Instead of $19)",
+        btn_update_ai_plan: "⚡ Update Your Plan",
+        missed_word: "missed",
+        stat_1_val: "1 Free Plan",
+        stat_1_lbl: "Free Start",
+        stat_2_lbl: "lioncouch AI Coach",
+        stat_3_lbl: "Affiliate Commission",
+        pricing_badge: "SUBSCRIPTION PLANS",
+        pricing_title: "Choose Your Discipline Level",
+        pricing_sub: "Your first 1 custom plan is completely free — upgrade anytime for unlimited plans, AI coaching, and digital programs.",
+        plan_popular: "Most Popular",
+        plan_starter_desc: "Unlimited Custom Plans + AI Support",
+        per_month: "/ month",
+        feat_st_1: "Unlimited custom plans & checklists",
+        feat_st_2: "1 AI-generated program per month",
+        feat_st_3: "Personal AI mentor (lioncouch) support",
+        feat_st_4: "50% Creator Affiliate Referral Link",
+        btn_buy_starter: "Activate Starter ($7)",
+        plan_pro_desc: "AI Mentor + 3 AI Programs + Digital Programs",
+        feat_pro_1: "Unlimited plans + 3 AI programs / month",
+        feat_pro_2: "Full access to all personal digital programs",
+        feat_pro_3: "24/7 AI Mentor (lioncouch) + Cloud Sync",
+        feat_pro_4: "50% Creator Affiliate Referral Link",
+        btn_buy_pro: "Activate PRO ($17)",
+        plan_vip_desc: "Annual VIP — Save Over 50% Annually",
+        per_year: "/ year",
+        feat_vip_1: "All PRO features for 12 full months",
+        feat_vip_2: "All current & future digital programs included",
+        feat_vip_3: "Save $105 compared to monthly billing",
+        feat_vip_4: "VIP Partner status & priority payouts",
+        btn_buy_vip: "Get VIP Access ($99 / year)",
+        prog_badge: "PERSONAL DIGITAL PROGRAMS",
+        prog_title: "Personal Digital Programs",
+        prog_sub: "Specialized digital programs — coming soon.",
+        prog_empty_slot: "Empty Slot — Program Coming Soon",
+        tracker_heading: "Your Plan",
+        tracker_subheading: "Structured discipline workspace — check off tasks and follow step-by-step guidance.",
+        lbl_program_overview: "Program Overview & Execution Guide",
+        lbl_progress: "Progress",
+        lbl_completed: "Completed",
+        builder_badge: "CUSTOM PLAN CREATOR",
+        builder_title: "Build Your Personal Plan",
+        lbl_duration_mode: "1. Choose Plan Duration",
+        mode_fixed_days: "📅 Number of Days",
+        mode_infinite_days: "∞ Infinite (No Day Count)",
+        lbl_slide_days: "Slide to choose days (7 - 90):",
+        day_word_plural: "days",
+        infinite_mode_desc: "∞ In Infinite Mode, days are not counted — your daily checklist stays active and can be reset any morning.",
+        lbl_plan_name: "2. Plan Title",
+        ph_plan_name: "e.g. My Daily Discipline Protocol",
+        lbl_plan_overview_input: "Program Overview / Goal (Optional)",
+        ph_plan_overview: "e.g. 21 days to rebuild morning focus, energy, and deep work",
+        lbl_checklist_items: "3. Write Daily Tasks & Explanations",
+        btn_add_check_row: "+ Add Task",
+        btn_cancel: "Cancel",
+        btn_save_custom_plan: "✓ Save & Start Plan",
+        btn_add_day: "+ Add Day",
+        btn_remove_day: "− Remove Day",
+        btn_new_day_reset: "↻ Start New Day",
+        ph_add_habit: "+ Task title...",
+        ph_add_habit_note: "Explanation / how to execute properly (optional)...",
+        lbl_apply_all_days: "All days",
+        btn_add: "Add Task",
+        lbl_daily_standard: "Daily Core Focus",
+        lbl_cloud_sync: "Cloud Synchronization",
+        sync_logged_out: "Sign in to permanently sync your progress to the cloud database.",
+        sync_logged_in: "✅ Synced to cloud: ",
+        btn_reset_progress: "Reset All Progress",
+        empty_day_tasks: "No tasks for this day yet. Add one below.",
+        mentor_sub: "Personal Discipline AI Mentor & Program Architect",
+        btn_pro_mode: "⚡ PRO ($9 Black Friday)",
+        ph_mentor_input: "Ask lioncouch to create a new plan OR edit your current tracker (e.g. Add cold shower to Day 3)...",
+        btn_send: "Send",
+        btn_apply_ai_plan: "⚡ Open in Your Plan",
+        partner_badge: "CREATOR & TIKTOK AFFILIATE PROGRAM",
+        partner_title: "Earn 50% From Every Referral Sale",
+        partner_desc: "Place your personal referral link in your TikTok or Instagram bio. You automatically earn 50% commission from every $9 subscription.",
+        partner_link_title: "Your Personal Referral Link",
+        partner_link_sub: "Copy and paste into your TikTok or Instagram bio",
+        btn_copy: "Copy Link",
+        lbl_referrals: "Referrals",
+        lbl_commission: "Commission",
+        lbl_balance: "Balance",
+        partner_lock_title: "Protect Your Partner Earnings",
+        partner_lock_desc: "Sign in or create an account so your unique referral code and 50% commission balance are permanently saved in the database.",
+        partner_unlocked_title: "✅ Partner Account Active",
+        partner_unlocked_desc: "Your unique referral code and 50% commission balance are synced to: ",
+        btn_auth_partner: "👤 Sign In / Register Account",
+        btn_manage_account: "👤 Manage Account",
+        footer_rights: "© 2026 LIONhabits — ai tracker. All rights reserved.",
+        auth_modal_title: "Sign In / Create Account",
+        auth_modal_sub: "Sign in to activate access and sync Your Plan tracker.",
+        auth_checkout_req: "Please create an account or sign in first to proceed to checkout.",
+        lbl_active_user: "Active Account",
+        btn_logout: "Sign Out",
+        lbl_email: "Email Address",
+        lbl_password: "Password (min. 6 characters)",
+        btn_continue: "Continue →",
+        checkout_title: "Activate Subscription",
+        checkout_sub: "Instant unlock upon payment + automatic 50% partner commission credit.",
+        lbl_selected_plan: "Selected Package",
+        lbl_partner_bonus_info: "Partner 50% Commission:",
+        paypal_loading: "Loading secure PayPal Smart Checkout...",
+        paypal_ready: "✅ Choose PayPal or Debit/Credit Card:",
+        day_word: "Day",
+        done_word: "done"
+      }
+    };
+
+    const DIGITAL_PROGRAMS = [];
+
+    function renderDigitalPrograms() {
+      const grid = document.getElementById('digital-programs-grid');
+      if (!grid) return;
+      const dict = I18N[state.lang];
+
+      if (!Array.isArray(DIGITAL_PROGRAMS) || DIGITAL_PROGRAMS.length === 0) {
+        grid.innerHTML = [1, 2, 3].map(() => `
+          <div class="min-h-[240px] rounded-[32px] bg-white/70 dark:bg-zinc-900/35 border border-dashed border-zinc-300 dark:border-zinc-800/90 p-7 flex flex-col items-center justify-center text-center">
+            <div class="w-12 h-12 rounded-full bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 flex items-center justify-center text-zinc-400 dark:text-zinc-600 text-lg mb-3">+</div>
+            <span class="text-xs font-semibold text-zinc-500">${escapeHtml(dict.prog_empty_slot)}</span>
+          </div>
+        `).join('');
+        return;
+      }
+
+      grid.innerHTML = DIGITAL_PROGRAMS.map(prog => {
+        const title = typeof prog.title === 'object' ? prog.title[state.lang] : prog.title;
+        const desc = typeof prog.desc === 'object' ? prog.desc[state.lang] : prog.desc;
+        return `
+          <div class="rounded-[32px] bg-white dark:bg-zinc-900/80 border border-zinc-200 dark:border-zinc-800 hover:border-amber-500/40 p-7 flex flex-col justify-between transition shadow-sm">
+            <div>
+              <h3 class="text-xl font-black text-zinc-950 dark:text-white">${escapeHtml(title)}</h3>
+              <p class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 mt-2 leading-relaxed">${escapeHtml(desc)}</p>
+              <div class="my-5 text-3xl font-black text-amber-600 dark:text-amber-400">$${Number(prog.price).toFixed(2)}</div>
+            </div>
+            <button type="button" onclick="openCheckout('${escapeHtml(title)}', ${Number(prog.price)})" class="w-full py-3.5 rounded-full font-extrabold text-sm text-zinc-950 bg-gradient-to-r from-amber-400 to-amber-500 hover:brightness-110 transition">
+              $${Number(prog.price).toFixed(2)}
+            </button>
+          </div>
+        `;
+      }).join('');
+    }
+
+    const BILINGUAL_DAYS = [
+      {
+        day: 1,
+        title: { ka: "სისტემის გაშვება & ფოკუსი", en: "System Ignition & Deep Focus" },
+        standard: { ka: "06:00 გაღვიძება • 0 სოციალური მედია დილით", en: "06:00 AM Wake-Up • Zero Social Media in Morning" },
+        tasks: [
+          {
+            ka: "გაღვიძება Snooze-ის გარეშე 06:00-ზე",
+            en: "Wake up at 06:00 AM without hitting snooze",
+            noteKa: "დადე ტელეფონი საწოლიდან 3 მეტრში — ადგომისთანავე დალიე 1 ჭიქა წყალი.",
+            noteEn: "Keep your phone 3 meters away from your bed and drink a full glass of water immediately.",
+            done: false
+          },
+          {
+            ka: "45 წუთი ღრმა ფოკუსი მთავარ მიზანზე",
+            en: "45 minutes of uninterrupted deep work",
+            noteKa: "ჩართე Flight Mode, დახურე ყველა ზედმეტი ფანჯარა და იმუშავე მხოლოდ ერთ მთავარ ამოცანაზე.",
+            noteEn: "Enable Airplane Mode, close all extra tabs, and execute one single high-leverage task.",
+            done: false
+          },
+          {
+            ka: "22:30-მდე ეკრანების გამორთვა",
+            en: "Turn off all screens before 10:30 PM",
+            noteKa: "ლურჯი შუქის გარეშე ტვინი სწრაფად გადადის ღრმა ძილის ფაზაში ხვალინდელი ენერგიისთვის.",
+            noteEn: "Eliminating blue light allows deep restorative sleep so you wake up sharp at 06:00.",
+            done: false
+          }
+        ]
+      },
+      {
+        day: 2,
+        title: { ka: "ფიზიკური ტონუსი & ენერგია", en: "Physical Power & Energy" },
+        standard: { ka: "45 წთ ვარჯიში • 3 ლიტრი წყალი", en: "45 Min Training • 3 Liters of Water" },
+        tasks: [
+          {
+            ka: "45 წუთი ძალისმიერი ან კარდიო ვარჯიში",
+            en: "45 minutes of strength or cardio training",
+            noteKa: "ფიზიკური დატვირთვა ზრდის დოფამინის ბაზისურ დონეს და ხსნის გონებრივ დაღლილობას.",
+            noteEn: "Physical intensity elevates baseline dopamine and clears mental fog.",
+            done: false
+          },
+          {
+            ka: "შაქრისა და ფასტ-ფუდის სრული ამოღება",
+            en: "Zero refined sugar or fast food all day",
+            noteKa: "შეინარჩუნე სტაბილური გლუკოზა — ენერგიის ვარდნის გარეშე მთელი დღის განმავლობაში.",
+            noteEn: "Keep blood glucose steady to prevent afternoon energy crashes.",
+            done: false
+          },
+          {
+            ka: "მინიმუმ 3 ლიტრი წყლის მიღება",
+            en: "Drink at least 3 liters of clean water",
+            noteKa: "დეჰიდრატაცია 20%-ით ამცირებს კონცენტრაციას — იქონიე წყლის ბოთლი სამუშაო მაგიდაზე.",
+            noteEn: "Even mild dehydration drops focus by 20% — keep a water bottle on your desk.",
+            done: false
+          }
+        ]
+      },
+      {
+        day: 3,
+        title: { ka: "დოფამინის კონტროლი", en: "Dopamine Detox Protocol" },
+        standard: { ka: "0 მოკლე ვიდეო (TikTok/Reels)", en: "Zero Short-Form Scrolling" },
+        tasks: [
+          {
+            ka: "სრული დღე უაზრო სქროლვის გარეშე",
+            en: "Full day without mindless short-video scrolling",
+            noteKa: "მოკლე ვიდეოები ფიტავს ყურადღების რესურსს — გამოიყენე სოც. ქსელი მხოლოდ კონტენტის ასატვირთად.",
+            noteEn: "Short-form feeds drain attention span — use social platforms only as a creator, not consumer.",
+            done: false
+          },
+          {
+            ka: "30 წუთი პროფესიული წიგნის კითხვა",
+            en: "30 minutes of reading a high-value book",
+            noteKa: "ჩაინიშნე 1 კონკრეტული იდეა, რომელსაც დღესვე გამოიყენებ პრაქტიკაში.",
+            noteEn: "Write down 1 actionable insight you will apply immediately today.",
+            done: false
+          },
+          {
+            ka: "დღის 3 მთავარი შედეგის ჩაწერა",
+            en: "Write down your 3 key wins of the day",
+            noteKa: "დააფიქსირე პროგრესი ძილის წინ — ტვინი სწავლობს დისციპლინით სიამოვნების მიღებას.",
+            noteEn: "Log your wins before sleep to rewire your brain to crave execution.",
+            done: false
+          }
+        ]
+      },
+      {
+        day: 4,
+        title: { ka: "მაქსიმალური პროდუქტიულობა", en: "Peak Execution Mode" },
+        standard: { ka: "2 საათი Deep Work რეჟიმი", en: "2 Hours Deep Work Block" },
+        tasks: [
+          {
+            ka: "90 წუთი მუშაობა Flight Mode-ით",
+            en: "90 minutes of work with phone on Airplane Mode",
+            noteKa: "90-წუთიანი ულტრადიანული ციკლი არის ტვინის პიკური კონცენტრაციის ოქროს სტანდარტი.",
+            noteEn: "A 90-minute ultradian cycle matches your brain's natural peak focus window.",
+            done: false
+          },
+          {
+            ka: "10,000 ნაბიჯის გავლა სუფთა ჰაერზე",
+            en: "Complete 10,000 steps outdoors",
+            noteKa: "სეირნობა ყურსასმენების გარეშე ასუფთავებს გონებას და აჩენს ახალ იდეებს.",
+            noteEn: "Walking without headphones clears mental clutter and sparks strategic clarity.",
+            done: false
+          },
+          {
+            ka: "ცივი შხაპი დილის მოთელვის შემდეგ",
+            en: "Cold shower right after morning mobility",
+            noteKa: "30-60 წამი ცივი წყალი წვრთნის ნებისყოფას დისკომფორტის დაძლევაში.",
+            noteEn: "30–60 seconds of cold exposure trains your nervous system to stay calm under stress.",
+            done: false
+          }
+        ]
+      },
+      {
+        day: 5,
+        title: { ka: "მენტალური სიმტკიცე", en: "Mental Fortitude" },
+        standard: { ka: "100% დათქმული გეგმის შესრულება", en: "100% Scheduled Task Execution" },
+        tasks: [
+          {
+            ka: "დილის 06:00 რუტინის უწყვეტი დაცვა",
+            en: "Strict adherence to the 06:00 AM routine",
+            noteKa: "დისციპლინა იზომება მაშინ, როცა მოტივაცია ნულზეა — შეასრულე გეგმა ემოციის გარეშე.",
+            noteEn: "Discipline is measured when motivation is zero — execute regardless of mood.",
+            done: false
+          },
+          {
+            ka: "1 საათი ახალი უნარის განვითარება",
+            en: "1 hour dedicated to learning a high-income skill",
+            noteKa: "ინვესტიცია საკუთარ ცოდნაში ყოველდღიურად აძლიერებს შენს პოზიციას.",
+            noteEn: "Daily skill compounding creates long-term leverage and independence.",
+            done: false
+          },
+          {
+            ka: "საღამოს თვით-ანალიზი და შეჯამება",
+            en: "Evening self-audit and journal review",
+            noteKa: "დაუსვი საკუთარ თავს კითხვა: სად დავკარგე დრო დღეს და როგორ გავაუმჯობესო ხვალ?",
+            noteEn: "Ask yourself: Where did I leak focus today, and how will I tighten it tomorrow?",
+            done: false
+          }
+        ]
+      },
+      {
+        day: 6,
+        title: { ka: "ოფლაინ აღდგენა & წესრიგი", en: "Offline Reset & Order" },
+        standard: { ka: "80% დრო ეკრანის გარეშე", en: "80% Screen-Free Recovery" },
+        tasks: [
+          {
+            ka: "აქტიური სპორტი ან ბუნებაში გასვლა",
+            en: "Active outdoor training or nature walk",
+            noteKa: "ნერვული სისტემის აღდგენა აუცილებელია, რომ მომდევნო კვირას არ გადაიწვა.",
+            noteEn: "Nervous system recovery prevents burnout and sustains high output.",
+            done: false
+          },
+          {
+            ka: "სამუშაო სივრცის სრული მოწესრიგება",
+            en: "Full workspace declutter and organization",
+            noteKa: "სუფთა მაგიდა და წაშლილი ზედმეტი ფაილები პირდაპირ ნიშნავს სუფთა გონებას.",
+            noteEn: "A clean desk and organized digital workspace directly reduce cognitive load.",
+            done: false
+          },
+          {
+            ka: "მომდევნო კვირის პრიორიტეტების დაგეგმვა",
+            en: "Map out top priorities for the upcoming week",
+            noteKa: "განსაზღვრე 3 მთავარი მიზანი, რომლის გარეშეც კვირა დასრულებულად არ ჩაითვლება.",
+            noteEn: "Define the top 3 non-negotiable outcomes for the upcoming week.",
+            done: false
+          }
+        ]
+      },
+      {
+        day: 7,
+        title: { ka: "რკინის დისციპლინის ფიქსაცია", en: "Iron Standard Lock-In" },
+        standard: { ka: "კვირის 100%-იანი კონტროლი", en: "100% Weekly Mastery Audit" },
+        tasks: [
+          {
+            ka: "კვირის პროგრესის სრული შეფასება",
+            en: "Complete full 7-day performance audit",
+            noteKa: "შეაჯამე მონიშნული დღეები — შენ უკვე შექმენი ახალი სტანდარტი.",
+            noteEn: "Review your completed days — you have forged a higher baseline standard.",
+            done: false
+          },
+          {
+            ka: "45 წუთი გამძლეობის ვარჯიში",
+            en: "45 minutes of endurance conditioning",
+            noteKa: "დაასრულე კვირა ძლიერი ფიზიკური აქტივობით.",
+            noteEn: "Close the week strong with sustained endurance conditioning.",
+            done: false
+          },
+          {
+            ka: "22:15-ზე ძილის რეჟიმის დაცვა",
+            en: "Lights out and sleep protocol by 10:15 PM",
+            noteKa: "მოემზადე ახალი ციკლისთვის სრული 8-საათიანი აღდგენით.",
+            noteEn: "Prepare for the next cycle with a full 8-hour restorative sleep.",
+            done: false
+          }
+        ]
+      }
+    ];
+
+    function getTodayDateString() {
+      const now = new Date();
+      const y = now.getFullYear();
+      const m = String(now.getMonth() + 1).padStart(2, '0');
+      const d = String(now.getDate()).padStart(2, '0');
+      return `${y}-${m}-${d}`;
+    }
+
+    function getElapsedCalendarDays(startDateStr) {
+      if (!startDateStr) return 0;
+      const parts = String(startDateStr).split('-').map(Number);
+      if (parts.length !== 3 || parts.some(isNaN)) return 0;
+      const startUtc = Date.UTC(parts[0], parts[1] - 1, parts[2]);
+      const now = new Date();
+      const todayUtc = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+      return Math.max(0, Math.floor((todayUtc - startUtc) / 86400000));
+    }
+
+    function cloneDefaultDays() {
+      return JSON.parse(JSON.stringify(BILINGUAL_DAYS));
+    }
+
+    function loadSavedDays() {
+      try {
+        const raw = safeGetStorage('lionhabits_bilingual_days_v2');
+        if (!raw) return cloneDefaultDays();
+        const parsed = JSON.parse(raw);
+        if (Array.isArray(parsed) && parsed.length >= 1 && parsed.every(d => Array.isArray(d.tasks))) {
+          return parsed;
+        }
+      } catch (e) {}
+      return cloneDefaultDays();
+    }
+
+    function initAffiliateCode() {
+      let existing = safeGetStorage('lionhabits_aff_code');
+      if (!existing) {
+        existing = 'lion_' + Math.random().toString(36).substring(2, 7);
+        safeSetStorage('lionhabits_aff_code', existing);
+      }
+      return existing;
+    }
+
+    let state = {
+      // Default to Day Mode ('light') unless user explicitly chose 'dark'
+      theme: safeGetStorage('lionhabits_theme', 'light') === 'dark' ? 'dark' : 'light',
+      lang: 'en',
+      authMode: 'signin',
+      user: null,
+      isPro: safeGetStorage('lionhabits_is_pro') === 'true',
+      activeDayIdx: 0,
+      planTitle: safeGetStorage('lionhabits_plan_title', ''),
+      planOverview: safeGetStorage('lionhabits_plan_overview', ''),
+      planEmoji: safeGetStorage('lionhabits_plan_emoji', '🦁'),
+      planMode: safeGetStorage('lionhabits_plan_mode', 'fixed') === 'infinite' ? 'infinite' : 'fixed',
+      planStartDate: safeGetStorage('lionhabits_plan_start_date', getTodayDateString()),
+      customPlansCount: Number(safeGetStorage('lionhabits_custom_plans_count', '0')) || 0,
+      builderDurationMode: 'fixed',
+      builderTasks: [
+        { title: '', note: '' },
+        { title: '', note: '' },
+        { title: '', note: '' }
+      ],
+      pendingPlan: null,
+      isSendingChat: false,
+      chatHistory: [],
+      generatedPlansMap: {},
+      paypalSdkLoaded: false,
+      paypalSdkLoading: false,
+      affiliateCode: initAffiliateCode(),
+      referredBy: safeGetStorage('lionhabits_referred_by', null),
+      affiliateBalance: 0,
+      referralsCount: 0,
+      days: loadSavedDays()
+    };
+
+    if (!safeGetStorage('lionhabits_plan_start_date')) {
+      safeSetStorage('lionhabits_plan_start_date', state.planStartDate);
+    }
+
+    // THEME CONTROLLER (DEFAULT DAY / LIGHT vs NIGHT / DARK WITH SMOOTH PILL SWITCH)
+    function applyTheme(themeName) {
+      state.theme = themeName === 'dark' ? 'dark' : 'light';
+      safeSetStorage('lionhabits_theme', state.theme);
+      const htmlEl = document.documentElement;
+      const toggleBtn = document.getElementById('theme-toggle-btn');
+      const pill = document.getElementById('theme-switch-pill');
+      const sunIcon = document.getElementById('icon-sun');
+      const moonIcon = document.getElementById('icon-moon');
+
+      if (state.theme === 'dark') {
+        htmlEl.classList.add('dark');
+        if (toggleBtn) toggleBtn.setAttribute('aria-checked', 'true');
+        if (pill) {
+          pill.classList.remove('translate-x-0');
+          pill.classList.add('translate-x-8');
+        }
+        if (sunIcon) {
+          sunIcon.classList.remove('text-zinc-950');
+          sunIcon.classList.add('text-zinc-400');
+        }
+        if (moonIcon) {
+          moonIcon.classList.remove('text-zinc-500');
+          moonIcon.classList.add('text-zinc-950');
+        }
+      } else {
+        htmlEl.classList.remove('dark');
+        if (toggleBtn) toggleBtn.setAttribute('aria-checked', 'false');
+        if (pill) {
+          pill.classList.remove('translate-x-8');
+          pill.classList.add('translate-x-0');
+        }
+        if (sunIcon) {
+          sunIcon.classList.remove('text-zinc-400');
+          sunIcon.classList.add('text-zinc-950');
+        }
+        if (moonIcon) {
+          moonIcon.classList.remove('text-zinc-950');
+          moonIcon.classList.add('text-zinc-500');
+        }
+      }
+    }
+
+    function toggleTheme() {
+      applyTheme(state.theme === 'dark' ? 'light' : 'dark');
+    }
+
+    function setLanguage() {
+      state.lang = 'en';
+      document.documentElement.lang = 'en';
+
+      const dict = I18N[state.lang];
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) el.textContent = dict[key];
+      });
+
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        if (dict[key]) el.setAttribute('placeholder', dict[key]);
+      });
+
+      refreshAuthHeader();
+      refreshPartnerView();
+      renderDigitalPrograms();
+      renderBuilderChecklistRows();
+      renderHabitTracker();
+    }
+
+    async function initApp() {
+      initContentProtection();
+      applyTheme(state.theme);
+
+      const urlParams = new URLSearchParams(window.location.search);
+
+      const ref = urlParams.get('aff') || urlParams.get('ref');
+      if (ref && ref.trim()) {
+        safeSetStorage('lionhabits_referred_by', ref.trim());
+        state.referredBy = ref.trim();
+      }
+
+      if (supabaseClient) {
+        try {
+          const { data } = await supabaseClient.auth.getSession();
+          if (data?.session?.user) {
+            state.user = data.session.user;
+            await syncProfileFromSupabase(data.session.user);
+          }
+        } catch (e) {}
+      }
+
+      if (state.planMode !== 'infinite') {
+        const elapsed = getElapsedCalendarDays(state.planStartDate);
+        if (elapsed > 0 && elapsed < state.days.length) {
+          state.activeDayIdx = elapsed;
+        }
+      }
+
+      document.addEventListener('keydown', (ev) => {
+        if (ev.key === 'Escape') {
+          closeAuthModal();
+          closeCheckoutModal();
+        }
+      });
+
+      setLanguage(state.lang);
+      refreshPartnerView();
+    }
+
+    function switchTab(tabName) {
+      document.querySelectorAll('.view-panel').forEach(p => p.classList.add('hidden'));
+      const target = document.getElementById('section-' + tabName);
+      if (target) target.classList.remove('hidden');
+
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        if (btn.getAttribute('data-tab') === tabName) {
+          btn.classList.remove('text-zinc-600', 'dark:text-zinc-400', 'bg-transparent');
+          btn.classList.add('bg-amber-500', 'text-zinc-950', 'font-bold');
+        } else {
+          btn.classList.remove('bg-amber-500', 'text-zinc-950', 'font-bold');
+          btn.classList.add('text-zinc-600', 'dark:text-zinc-400');
+        }
+      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // PAYPAL SMART BUTTONS & SUPABASE AFFILIATE
+    function loadPayPalSdk(callback) {
+      if (window.paypal && typeof window.paypal.Buttons === 'function') {
+        state.paypalSdkLoaded = true;
+        if (callback) callback(true);
+        return;
+      }
+      if (state.paypalSdkLoading) return;
+      state.paypalSdkLoading = true;
+
+      const script = document.createElement('script');
+      script.src = 'https://www.paypal.com/sdk/js?client-id=' + encodeURIComponent(PAYPAL_CLIENT_ID) + '&currency=USD&intent=capture';
+      script.async = true;
+      script.onload = () => {
+        state.paypalSdkLoading = false;
+        state.paypalSdkLoaded = true;
+        if (callback) callback(true);
+      };
+      script.onerror = () => {
+        state.paypalSdkLoading = false;
+        if (callback) callback(false);
+      };
+      document.head.appendChild(script);
+    }
+
+    function openCheckout(planName, price) {
+      if (!state.user) {
+        state.pendingPlan = { planName, price };
+        const msg = I18N[state.lang].auth_checkout_req;
+        showToast(msg);
+        openAuthModal(msg, true);
+        return;
+      }
+
+      const numPrice = Number(price);
+      const commission = (numPrice * 0.50).toFixed(2);
+      state.pendingPlan = { planName, price: numPrice };
+
+      document.getElementById('checkout-plan-name').textContent = planName;
+      document.getElementById('checkout-plan-price').textContent = '$' + numPrice.toFixed(2);
+      const commEl = document.getElementById('checkout-commission-preview');
+      if (commEl) commEl.textContent = '$' + commission;
+
+      const modal = document.getElementById('modal-checkout');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+
+      renderPayPalSmartButtons();
+    }
+
+    function closeCheckoutModal() {
+      const modal = document.getElementById('modal-checkout');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function renderPayPalSmartButtons() {
+      const container = document.getElementById('paypal-button-container');
+      const statusEl = document.getElementById('paypal-sdk-status');
+      if (!container) return;
+      container.innerHTML = '';
+
+      if (!PAYPAL_CLIENT_ID || PAYPAL_CLIENT_ID === 'YOUR_LIVE_PAYPAL_CLIENT_ID') {
+        if (statusEl) {
+          statusEl.textContent = state.lang === 'en'
+            ? 'PayPal Live Client ID is ready to be connected in PAYPAL_CLIENT_ID.'
+            : 'ჩასვი შენი Live PayPal Client ID კოდში (PAYPAL_CLIENT_ID) გადახდების გასააქტიურებლად.';
+        }
+        return;
+      }
+
+      loadPayPalSdk((loaded) => {
+        if (!loaded || !window.paypal || typeof window.paypal.Buttons !== 'function') {
+          if (statusEl) {
+            statusEl.textContent = state.lang === 'en'
+              ? 'Unable to load PayPal SDK. Check your Live Client ID.'
+              : 'PayPal SDK ვერ ჩაიტვირთა. შეამოწმე Live Client ID.';
+          }
+          return;
+        }
+
+        if (statusEl) {
+          statusEl.textContent = I18N[state.lang].paypal_ready;
+        }
+
+        const chosen = state.pendingPlan || { planName: 'LION PRO — BLACK FRIDAY', price: 9 };
+
+        try {
+          window.paypal.Buttons({
+            style: {
+              layout: 'vertical',
+              color: 'gold',
+              shape: 'pill',
+              label: 'pay'
+            },
+            createOrder: function(data, actions) {
+              return actions.order.create({
+                purchase_units: [{
+                  description: 'LIONhabits — ' + chosen.planName,
+                  custom_id: state.referredBy || 'direct',
+                  amount: {
+                    currency_code: 'USD',
+                    value: Number(chosen.price).toFixed(2)
+                  }
+                }]
+              });
+            },
+            onApprove: async function(data, actions) {
+              const details = await actions.order.capture();
+              await completeVerifiedPayment(chosen, details?.id || data?.orderID || ('pp_' + Date.now()));
+            },
+            onError: function() {
+              showToast(
+                state.lang === 'en'
+                  ? 'PayPal checkout error. Please try again.'
+                  : 'PayPal-ით გადახდის შეცდომა. სცადეთ თავიდან.'
+              );
+            }
+          }).render('#paypal-button-container');
+        } catch (e) {}
+      });
+    }
+
+    // Automatic 50% Referral Commission Crediting in Supabase
+    async function creditAffiliatePartnerInSupabase(amountPaid) {
+      const commission = Number((Number(amountPaid) * 0.50).toFixed(2));
+      const refCode = state.referredBy;
+      if (!refCode || !supabaseClient) {
+        return { credited: false, commission };
+      }
+
+      try {
+        // 1. Try atomic RPC function first (if created in Supabase SQL Editor)
+        const { data: rpcData, error: rpcErr } = await supabaseClient.rpc('credit_affiliate_commission', {
+          p_affiliate_code: refCode,
+          p_commission: commission,
+          p_buyer_id: state.user?.id || null
+        });
+
+        if (!rpcErr && rpcData === true) {
+          return { credited: true, commission, partnerCode: refCode };
+        }
+
+        // 2. Fallback: Direct select + update on profiles table
+        const { data: partner, error: fetchErr } = await supabaseClient
+          .from('profiles')
+          .select('id, affiliate_code, affiliate_balance, referrals_count')
+          .eq('affiliate_code', refCode)
+          .single();
+
+        if (fetchErr || !partner) {
+          return { credited: false, commission };
+        }
+
+        if (state.user && partner.id === state.user.id) {
+          return { credited: false, commission, selfReferral: true };
+        }
+
+        const updatedBalance = Number((Number(partner.affiliate_balance || 0) + commission).toFixed(2));
+        const updatedCount = Number(partner.referrals_count || 0) + 1;
+
+        const { error: updateErr } = await supabaseClient
+          .from('profiles')
+          .update({
+            affiliate_balance: updatedBalance,
+            referrals_count: updatedCount
+          })
+          .eq('id', partner.id);
+
+        if (updateErr) return { credited: false, commission };
+
+        return {
+          credited: true,
+          commission,
+          partnerCode: refCode,
+          newBalance: updatedBalance,
+          newCount: updatedCount
+        };
+      } catch (e) {
+        return { credited: false, commission };
+      }
+    }
+
+    async function completeVerifiedPayment(chosenPlan, orderId) {
+      const chosen = chosenPlan || state.pendingPlan || { planName: 'LION PRO — BLACK FRIDAY', price: 9 };
+      const p = Number(chosen.price);
+      const planType = p >= 90 ? 'vip' : (p >= 15 ? 'pro' : 'starter');
+
+      if (supabaseClient && state.user && !state.user.isLocalFallback) {
+        try {
+          await supabaseClient.from('profiles').update({
+            is_pro: true,
+            plan_type: planType
+          }).eq('id', state.user.id);
+        } catch (e) {}
+      }
+
+      const refResult = await creditAffiliatePartnerInSupabase(chosen.price);
+
+      state.isPro = true;
+      state.pendingPlan = null;
+      safeSetStorage('lionhabits_is_pro', 'true');
+      refreshAuthHeader();
+      refreshPartnerView();
+      closeCheckoutModal();
+
+      if (refResult.credited) {
+        showToast(
+          state.lang === 'en'
+            ? `🎉 PRO Activated! +$${refResult.commission.toFixed(2)} (50%) credited to partner ${refResult.partnerCode}`
+            : `🎉 PRO გააქტიურდა! პარტნიორს (${refResult.partnerCode}) დაერიცხა +$${refResult.commission.toFixed(2)} (50%)`
+        );
+      } else {
+        showToast(
+          state.lang === 'en'
+            ? `🎉 ${chosen.planName} Activated! (Order: ${orderId})`
+            : `🎉 ${chosen.planName} წარმატებით გააქტიურდა!`
+        );
+      }
+    }
+
+    // 8. SUPABASE AUTHENTICATION
+    function setAuthMode(mode) {
+      state.authMode = mode === 'signup' ? 'signup' : 'signin';
+      const signInBtn = document.getElementById('auth-mode-signin');
+      const signUpBtn = document.getElementById('auth-mode-signup');
+      const errEl = document.getElementById('auth-error-msg');
+      if (errEl) errEl.classList.add('hidden');
+
+      if (state.authMode === 'signin') {
+        signInBtn.className = 'py-2 rounded-full text-xs font-extrabold bg-amber-500 text-zinc-950 transition';
+        signUpBtn.className = 'py-2 rounded-full text-xs font-bold text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-white transition';
+      } else {
+        signUpBtn.className = 'py-2 rounded-full text-xs font-extrabold bg-amber-500 text-zinc-950 transition';
+        signInBtn.className = 'py-2 rounded-full text-xs font-bold text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-white transition';
+      }
+    }
+
+    function openAuthModal(customMessage, preservePendingPlan = false) {
+      if (!preservePendingPlan) {
+        state.pendingPlan = null;
+      }
+
+      const modal = document.getElementById('modal-auth');
+      const form = document.getElementById('auth-form');
+      const userPanel = document.getElementById('auth-user-panel');
+      const errEl = document.getElementById('auth-error-msg');
+      const descEl = document.getElementById('auth-modal-desc');
+
+      errEl.classList.add('hidden');
+      descEl.textContent = customMessage || I18N[state.lang].auth_modal_sub;
+
+      if (state.user) {
+        form.classList.add('hidden');
+        userPanel.classList.remove('hidden');
+        document.getElementById('auth-user-email').textContent = state.user.email;
+        document.getElementById('auth-user-badge').textContent = state.isPro ? '⚡ PRO ACTIVE' : 'STANDARD';
+      } else {
+        form.classList.remove('hidden');
+        userPanel.classList.add('hidden');
+        setAuthMode(state.authMode);
+      }
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeAuthModal() {
+      const modal = document.getElementById('modal-auth');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    async function submitSupabaseAuth(e) {
+      e.preventDefault();
+      const email = document.getElementById('input-auth-email').value.trim();
+      const password = document.getElementById('input-auth-pass').value;
+      const errEl = document.getElementById('auth-error-msg');
+      const btn = document.getElementById('btn-auth-submit');
+
+      if (!email || password.length < 6) return;
+
+      errEl.classList.add('hidden');
+      btn.disabled = true;
+
+      try {
+        let authedUser = null;
+
+        if (supabaseClient) {
+          if (state.authMode === 'signup') {
+            const { data, error } = await supabaseClient.auth.signUp({ email, password });
+            if (error) throw error;
+            authedUser = data?.user || null;
+          } else {
+            const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password });
+            if (error) {
+              if (/invalid login credentials/i.test(error.message || '')) {
+                throw new Error(
+                  state.lang === 'en'
+                    ? 'Invalid email or password. If you are new, switch to "Create Account".'
+                    : 'არასწორი ელ-ფოსტა ან პაროლი. თუ ახალი ხარ, გადართე „რეგისტრაციაზე“.'
+                );
+              }
+              throw error;
+            }
+            authedUser = data?.user || null;
+          }
+        } else {
+          authedUser = { id: 'local_' + Date.now(), email, isLocalFallback: true };
+        }
+
+        if (authedUser) {
+          state.user = authedUser;
+          await syncProfileFromSupabase(authedUser);
+          refreshAuthHeader();
+          refreshPartnerView();
+          closeAuthModal();
+          showToast(state.lang === 'en' ? '✅ Signed in successfully!' : '✅ წარმატებით შეხვედი ანგარიშში!');
+
+          if (state.pendingPlan) {
+            const pending = state.pendingPlan;
+            state.pendingPlan = null;
+            setTimeout(() => openCheckout(pending.planName, pending.price), 250);
+          }
+        }
+      } catch (err) {
+        errEl.textContent = err.message || (state.lang === 'en' ? 'Authentication error' : 'ავტორიზაციის შეცდომა');
+        errEl.classList.remove('hidden');
+      } finally {
+        btn.disabled = false;
+      }
+    }
+
+    async function syncProfileFromSupabase(user) {
+      if (!supabaseClient || !user || user.isLocalFallback) return;
+      try {
+        const { data: profile } = await supabaseClient
+          .from('profiles')
+          .select('*')
+          .eq('id', user.id)
+          .single();
+
+        if (profile) {
+          state.isPro = !!profile.is_pro;
+          safeSetStorage('lionhabits_is_pro', state.isPro ? 'true' : 'false');
+          if (profile.affiliate_code) state.affiliateCode = profile.affiliate_code;
+          state.affiliateBalance = Number(profile.affiliate_balance || 0);
+          state.referralsCount = Number(profile.referrals_count || 0);
+          if (profile.habit_data && Array.isArray(profile.habit_data.days) && profile.habit_data.days.length >= 1) {
+            state.days = profile.habit_data.days;
+            if (typeof profile.habit_data.planTitle === 'string') {
+              state.planTitle = profile.habit_data.planTitle;
+              safeSetStorage('lionhabits_plan_title', state.planTitle);
+            }
+            if (typeof profile.habit_data.planOverview === 'string') {
+              state.planOverview = profile.habit_data.planOverview;
+              safeSetStorage('lionhabits_plan_overview', state.planOverview);
+            }
+            if (typeof profile.habit_data.planEmoji === 'string') {
+              state.planEmoji = profile.habit_data.planEmoji;
+              safeSetStorage('lionhabits_plan_emoji', state.planEmoji);
+            }
+            if (profile.habit_data.planMode === 'infinite' || profile.habit_data.planMode === 'fixed') {
+              state.planMode = profile.habit_data.planMode;
+              safeSetStorage('lionhabits_plan_mode', state.planMode);
+            }
+            if (typeof profile.habit_data.planStartDate === 'string') {
+              state.planStartDate = profile.habit_data.planStartDate;
+              safeSetStorage('lionhabits_plan_start_date', state.planStartDate);
+            }
+            safeSetStorage('lionhabits_bilingual_days_v2', JSON.stringify(state.days));
+          }
+        } else {
+          const cleanPrefix = (user.email.split('@')[0] || 'lion').replace(/[^a-zA-Z0-9_]/g, '') || 'lion';
+          const code = cleanPrefix + '_' + Math.floor(100 + Math.random() * 900);
+          await supabaseClient.from('profiles').insert({
+            id: user.id,
+            email: user.email,
+            is_pro: false,
+            affiliate_code: code,
+            referred_by: state.referredBy,
+            affiliate_balance: 0,
+            referrals_count: 0,
+            habit_data: {
+              planTitle: state.planTitle,
+              planOverview: state.planOverview,
+              planEmoji: state.planEmoji,
+              planMode: state.planMode,
+              planStartDate: state.planStartDate,
+              days: state.days
+            }
+          });
+          state.affiliateCode = code;
+        }
+        safeSetStorage('lionhabits_aff_code', state.affiliateCode);
+        refreshPartnerView();
+        renderHabitTracker();
+      } catch (e) {}
+    }
+
+    async function handleSignOut() {
+      if (supabaseClient) {
+        try {
+          await supabaseClient.auth.signOut();
+        } catch (e) {}
+      }
+      state.user = null;
+      state.isPro = false;
+      state.affiliateBalance = 0;
+      state.referralsCount = 0;
+      safeSetStorage('lionhabits_is_pro', 'false');
+      refreshAuthHeader();
+      refreshPartnerView();
+      closeAuthModal();
+      showToast(state.lang === 'en' ? 'Signed out' : 'ანგარიშიდან გამოხვედი');
+    }
+
+    function refreshAuthHeader() {
+      const authText = document.getElementById('header-auth-text');
+      const proPill = document.getElementById('pro-active-pill');
+      const syncLabel = document.getElementById('sync-status-label');
+
+      if (state.user) {
+        authText.textContent = state.user.email.split('@')[0];
+        if (syncLabel) syncLabel.textContent = I18N[state.lang].sync_logged_in + state.user.email;
+      } else {
+        authText.textContent = I18N[state.lang].btn_login;
+        if (syncLabel) syncLabel.textContent = I18N[state.lang].sync_logged_out;
+      }
+
+      if (state.isPro) {
+        proPill.classList.remove('hidden');
+        proPill.classList.add('inline-flex');
+      } else {
+        proPill.classList.add('hidden');
+        proPill.classList.remove('inline-flex');
+      }
+    }
+
+    // CUSTOM CHECKLIST BUILDER & TRACKER
+    function toggleManualBuilder() {
+      const panel = document.getElementById('manual-plan-builder');
+      if (!panel) return;
+      const isHidden = panel.classList.contains('hidden');
+      if (isHidden) {
+        panel.classList.remove('hidden');
+        renderBuilderChecklistRows();
+      } else {
+        panel.classList.add('hidden');
+      }
+    }
+
+    function setBuilderDurationMode(mode) {
+      state.builderDurationMode = mode === 'infinite' ? 'infinite' : 'fixed';
+      const fixedBtn = document.getElementById('mode-fixed-btn');
+      const infBtn = document.getElementById('mode-infinite-btn');
+      const fixedCtrl = document.getElementById('builder-fixed-controls');
+      const infNotice = document.getElementById('builder-infinite-notice');
+
+      if (state.builderDurationMode === 'fixed') {
+        fixedBtn.className = 'px-4 py-2 rounded-full text-xs font-extrabold bg-amber-500 text-zinc-950 transition';
+        infBtn.className = 'px-4 py-2 rounded-full text-xs font-bold text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-white transition';
+        fixedCtrl.classList.remove('hidden');
+        infNotice.classList.add('hidden');
+      } else {
+        infBtn.className = 'px-4 py-2 rounded-full text-xs font-extrabold bg-amber-500 text-zinc-950 transition';
+        fixedBtn.className = 'px-4 py-2 rounded-full text-xs font-bold text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-white transition';
+        fixedCtrl.classList.add('hidden');
+        infNotice.classList.remove('hidden');
+      }
+    }
+
+    function updateBuilderSliderVal(val) {
+      const disp = document.getElementById('builder-days-display');
+      if (disp) disp.textContent = String(val);
+    }
+
+    function renderBuilderChecklistRows() {
+      const box = document.getElementById('builder-checklist-rows');
+      if (!box) return;
+      const phTitle = state.lang === 'en' ? 'Task title #' : 'დავალების სათაური #';
+      const phNote = state.lang === 'en' ? 'Explanation / instruction (optional)...' : 'განმარტება / ინსტრუქცია (არასავალდებულო)...';
+
+      box.innerHTML = state.builderTasks.map((item, idx) => `
+        <div class="p-3.5 rounded-3xl bg-zinc-50 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 focus-within:border-amber-500 transition space-y-2">
+          <div class="flex items-center gap-3">
+            <span class="w-6 h-6 rounded-full border-2 border-amber-500/50 flex items-center justify-center text-[11px] font-bold text-amber-600 dark:text-amber-400 shrink-0">${idx + 1}</span>
+            <input
+              type="text"
+              maxlength="120"
+              value="${escapeHtml(item.title)}"
+              oninput="updateBuilderTaskRow(${idx}, 'title', this.value)"
+              placeholder="${phTitle}${idx + 1}..."
+              class="flex-1 bg-transparent text-sm font-semibold text-zinc-950 dark:text-white outline-none"
+            />
+            ${state.builderTasks.length > 1 ? `
+              <button type="button" onclick="removeBuilderChecklistRow(${idx})" class="w-7 h-7 rounded-full text-zinc-400 hover:text-red-500 hover:bg-zinc-200 dark:hover:bg-zinc-900 flex items-center justify-center text-xs transition" aria-label="Remove">✕</button>
+            ` : ''}
+          </div>
+          <div class="pl-9">
+            <input
+              type="text"
+              maxlength="220"
+              value="${escapeHtml(item.note)}"
+              oninput="updateBuilderTaskRow(${idx}, 'note', this.value)"
+              placeholder="${phNote}"
+              class="w-full bg-transparent text-xs text-zinc-600 dark:text-zinc-400 outline-none"
+            />
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function updateBuilderTaskRow(idx, field, val) {
+      if (!state.builderTasks[idx]) return;
+      state.builderTasks[idx][field] = val;
+    }
+
+    function addBuilderChecklistRow() {
+      if (state.builderTasks.length >= 20) return;
+      state.builderTasks.push({ title: '', note: '' });
+      renderBuilderChecklistRows();
+    }
+
+    function removeBuilderChecklistRow(idx) {
+      if (state.builderTasks.length <= 1) return;
+      state.builderTasks.splice(idx, 1);
+      renderBuilderChecklistRows();
+    }
+
+    function handleCreateManualPlan(e) {
+      e.preventDefault();
+
+      if (!state.isPro && state.customPlansCount >= 1) {
+        showToast(
+          state.lang === 'en'
+            ? 'Free tier includes 1 custom plan. Upgrade to Starter ($7/mo) for unlimited plans!'
+            : 'უფასო რეჟიმში 1 პირადი გეგმა შედის. ულიმიტო გეგმებისთვის გაააქტიურე Starter ($7/თვე)!'
+        );
+        openCheckout('LION PRO — BLACK FRIDAY', 9);
+        return;
+      }
+
+      const nameInput = document.getElementById('builder-plan-name');
+      const overviewInput = document.getElementById('builder-plan-overview');
+      const sliderInput = document.getElementById('builder-days-slider');
+
+      const tasksList = state.builderTasks
+        .map(t => ({ title: t.title.trim(), note: t.note.trim() }))
+        .filter(t => t.title.length > 0);
+
+      if (tasksList.length === 0) {
+        showToast(state.lang === 'en' ? 'Add at least 1 task!' : 'ჩაწერე მინიმუმ 1 დავალება!');
+        return;
+      }
+
+      const isInfinite = state.builderDurationMode === 'infinite';
+      const numDays = isInfinite ? 1 : Math.min(90, Math.max(7, parseInt(sliderInput.value, 10) || 21));
+      const customName = (nameInput.value || '').trim() || (
+        isInfinite
+          ? (state.lang === 'en' ? 'My Infinite Checklist' : 'ჩემი უსასრულო ჩეკლისტი')
+          : (state.lang === 'en' ? `My ${numDays}-Day Discipline System` : `ჩემი ${numDays}-დღიანი სისტემა`)
+      );
+      const customOverview = (overviewInput.value || '').trim();
+
+      const generatedDays = [];
+      for (let d = 1; d <= numDays; d++) {
+        generatedDays.push({
+          day: d,
+          title: {
+            ka: isInfinite ? 'ყოველდღიური შესრულების სისტემა' : `${customName} — დღე ${d}`,
+            en: isInfinite ? 'Daily Execution System' : `${customName} — Day ${d}`
+          },
+          standard: {
+            ka: `${tasksList.length} ყოველდღიური პუნქტი`,
+            en: `${tasksList.length} Daily Action Items`
+          },
+          tasks: tasksList.map(t => ({
+            ka: t.title,
+            en: t.title,
+            noteKa: t.note,
+            noteEn: t.note,
+            done: false
+          }))
+        });
+      }
+
+      state.days = generatedDays;
+      state.planTitle = customName;
+      state.planOverview = customOverview;
+      state.planEmoji = '🦁';
+      state.planMode = isInfinite ? 'infinite' : 'fixed';
+      state.planStartDate = getTodayDateString();
+      state.activeDayIdx = 0;
+      state.customPlansCount += 1;
+
+      safeSetStorage('lionhabits_plan_title', state.planTitle);
+      safeSetStorage('lionhabits_plan_overview', state.planOverview);
+      safeSetStorage('lionhabits_plan_emoji', state.planEmoji);
+      safeSetStorage('lionhabits_plan_mode', state.planMode);
+      safeSetStorage('lionhabits_plan_start_date', state.planStartDate);
+      safeSetStorage('lionhabits_custom_plans_count', String(state.customPlansCount));
+
+      saveTrackerState();
+      renderHabitTracker();
+      toggleManualBuilder();
+      showToast(
+        state.lang === 'en'
+          ? `✅ "${customName}" is now active!`
+          : `✅ "${customName}" წარმატებით შეიქმნა!`
+      );
+    }
+
+    function addExtraDayToPlan() {
+      if (state.days.length >= 90) return;
+      const nextNum = state.days.length + 1;
+      const templateTasks = state.days[state.days.length - 1]?.tasks || [];
+      state.days.push({
+        day: nextNum,
+        title: { ka: `დღე ${nextNum} — ფოკუსი და დისციპლინა`, en: `Day ${nextNum} — Focus & Discipline` },
+        standard: { ka: `${templateTasks.length} დავალება`, en: `${templateTasks.length} Action Items` },
+        tasks: templateTasks.map(t => ({
+          ka: t.ka,
+          en: t.en,
+          noteKa: t.noteKa || '',
+          noteEn: t.noteEn || '',
+          done: false
+        }))
+      });
+      state.activeDayIdx = state.days.length - 1;
+      saveTrackerState();
+      renderHabitTracker();
+      showToast(state.lang === 'en' ? `Day ${nextNum} added` : `დაემატა დღე ${nextNum}`);
+    }
+
+    function removeLastDayFromPlan() {
+      if (state.days.length <= 1) return;
+      state.days.pop();
+      if (state.activeDayIdx >= state.days.length) {
+        state.activeDayIdx = state.days.length - 1;
+      }
+      saveTrackerState();
+      renderHabitTracker();
+    }
+
+    function resetCurrentDayChecks() {
+      const currentDay = state.days[state.activeDayIdx];
+      if (!currentDay) return;
+      currentDay.tasks.forEach(t => { t.done = false; });
+      saveTrackerState();
+      renderHabitTracker();
+      showToast(state.lang === 'en' ? 'Checklist reset for today!' : 'ჩეკლისტი განახლდა ახალი დღისთვის!');
+    }
+
+    function renderHabitTracker() {
+      const dict = I18N[state.lang];
+      const isInfinite = state.planMode === 'infinite';
+      const elapsedDays = isInfinite ? 0 : getElapsedCalendarDays(state.planStartDate);
+
+      let total = 0;
+      let done = 0;
+      state.days.forEach(d => {
+        total += d.tasks.length;
+        done += d.tasks.filter(t => t.done).length;
+      });
+      const pct = total > 0 ? Math.round((done / total) * 100) : 0;
+
+      const headingEl = document.getElementById('tracker-plan-title');
+      if (headingEl) {
+        headingEl.textContent = state.planTitle ? state.planTitle : dict.tracker_heading;
+      }
+
+      const emojiEl = document.getElementById('tracker-plan-emoji');
+      if (emojiEl) {
+        emojiEl.textContent = state.planEmoji || '🦁';
+      }
+
+      const overviewEl = document.getElementById('tracker-plan-overview-text');
+      if (overviewEl) {
+        if (state.planOverview && state.planOverview.trim()) {
+          overviewEl.textContent = state.planOverview;
+        } else {
+          overviewEl.textContent = state.lang === 'en'
+            ? 'This workspace is structured as a clean digital discipline system. Execute each step in order, read the guidance notes below every task, and maintain zero missed days.'
+            : 'ეს პროგრამა აგებულია სტრუქტურირებული ციფრული სისტემის პრინციპზე. შეასრულე თითოეული პუნქტი თანმიმდევრობით, გაეცანი ქვემოთ მოცემულ განმარტებებს და არ ჩააგდო არცერთი დღე.';
+        }
+      }
+
+      document.getElementById('header-pct-badge').textContent = pct + '%';
+      document.getElementById('tracker-total-pct').textContent = pct + '%';
+      document.getElementById('tracker-total-count').textContent = `${done}/${total}`;
+      document.getElementById('tracker-progress-bar').style.width = pct + '%';
+
+      const daysWrapper = document.getElementById('tracker-days-wrapper');
+      const resetInfBtn = document.getElementById('btn-reset-infinite-day');
+      const applyAllWrap = document.getElementById('apply-all-days-wrapper');
+
+      if (isInfinite) {
+        if (daysWrapper) daysWrapper.classList.add('hidden');
+        if (resetInfBtn) resetInfBtn.classList.remove('hidden');
+        if (applyAllWrap) applyAllWrap.classList.add('hidden');
+        state.activeDayIdx = 0;
+      } else {
+        if (daysWrapper) daysWrapper.classList.remove('hidden');
+        if (resetInfBtn) resetInfBtn.classList.add('hidden');
+        if (applyAllWrap) applyAllWrap.classList.remove('hidden');
+      }
+
+      const countBadge = document.getElementById('tracker-days-count-badge');
+      if (countBadge) {
+        countBadge.textContent = state.lang === 'en'
+          ? `${state.days.length}-Day Active Program`
+          : `${state.days.length}-დღიანი აქტიური პროგრამა`;
+      }
+
+      const tabsGrid = document.getElementById('days-tabs-grid');
+      if (!isInfinite && tabsGrid) {
+        tabsGrid.innerHTML = state.days.map((d, idx) => {
+          const dDone = d.tasks.filter(t => t.done).length;
+          const isDayComplete = d.tasks.length > 0 && dDone === d.tasks.length;
+          const isPastIncomplete = idx < elapsedDays && !isDayComplete;
+          const active = idx === state.activeDayIdx;
+
+          let cardClasses = '';
+          let subText = `${dDone}/${d.tasks.length} ${dict.done_word}`;
+
+          if (isPastIncomplete) {
+            cardClasses = active
+              ? 'bg-red-500 border-red-400 text-white font-black shadow-lg'
+              : 'bg-red-500/12 border-red-500/45 text-red-600 dark:text-red-300 hover:border-red-400';
+            subText = `✕ ${dict.missed_word} (${dDone}/${d.tasks.length})`;
+          } else if (isDayComplete) {
+            cardClasses = active
+              ? 'bg-emerald-500 border-emerald-400 text-zinc-950 font-black shadow-lg'
+              : 'bg-emerald-500/12 border-emerald-500/45 text-emerald-700 dark:text-emerald-300 hover:border-emerald-400';
+            subText = `✓ ${dict.done_word}`;
+          } else if (active) {
+            cardClasses = 'bg-amber-500 border-amber-400 text-zinc-950 font-black shadow-lg';
+          } else {
+            cardClasses = 'bg-white dark:bg-zinc-900/80 border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 hover:border-amber-500/50';
+          }
+
+          return `
+            <button type="button" onclick="selectTrackerDay(${idx})" class="p-3.5 rounded-3xl border text-center transition ${cardClasses}">
+              <div class="text-xs uppercase font-extrabold">${dict.day_word} ${d.day}</div>
+              <div class="text-[11px] mt-0.5 font-bold opacity-90">${subText}</div>
+            </button>
+          `;
+        }).join('');
+      }
+
+      const currentDay = state.days[state.activeDayIdx] || state.days[0];
+      const currentDone = currentDay.tasks.filter(t => t.done).length;
+      const isCurrentComplete = currentDay.tasks.length > 0 && currentDone === currentDay.tasks.length;
+      const isCurrentMissed = !isInfinite && state.activeDayIdx < elapsedDays && !isCurrentComplete;
+      const dayTitle = typeof currentDay.title === 'object' ? currentDay.title[state.lang] : currentDay.title;
+      const dayStd = typeof currentDay.standard === 'object' ? currentDay.standard[state.lang] : currentDay.standard;
+
+      document.getElementById('current-day-label').textContent = isInfinite
+        ? (state.lang === 'en' ? '∞ INFINITE CHECKLIST' : '∞ უსასრულო ჩეკლისტი')
+        : `${dict.day_word} ${currentDay.day} / ${state.days.length}`;
+      document.getElementById('current-day-title').textContent = dayTitle;
+
+      const ratioBadge = document.getElementById('current-day-ratio');
+      if (isCurrentMissed) {
+        ratioBadge.className = 'text-xs font-extrabold px-4 py-1.5 rounded-full bg-red-500/15 text-red-600 dark:text-red-300 border border-red-500/40';
+        ratioBadge.textContent = `✕ ${dict.missed_word} (${currentDone}/${currentDay.tasks.length})`;
+      } else if (isCurrentComplete) {
+        ratioBadge.className = 'text-xs font-extrabold px-4 py-1.5 rounded-full bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 border border-emerald-500/40';
+        ratioBadge.textContent = `✓ ${dict.done_word} (${currentDone}/${currentDay.tasks.length})`;
+      } else {
+        ratioBadge.className = 'text-xs font-bold px-4 py-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 text-amber-700 dark:text-amber-300';
+        ratioBadge.textContent = `${currentDone} / ${currentDay.tasks.length}`;
+      }
+
+      document.getElementById('current-day-standard').textContent = dayStd;
+
+      const listBox = document.getElementById('tasks-list-box');
+      if (currentDay.tasks.length === 0) {
+        listBox.innerHTML = `
+          <div class="p-6 rounded-3xl bg-zinc-50 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800/80 text-center text-xs text-zinc-500 dark:text-zinc-400">
+            ${escapeHtml(dict.empty_day_tasks)}
+          </div>
+        `;
+        return;
+      }
+
+      // Render Rich Task Cards (Title + Explanation Note + Status Pill)
+      listBox.innerHTML = currentDay.tasks.map((task, tIdx) => {
+        const taskLabel = task[state.lang] || task.text || task.ka || '';
+        const taskNote = state.lang === 'en'
+          ? (task.noteEn || task.note || task.noteKa || '')
+          : (task.noteKa || task.note || task.noteEn || '');
+
+        const rowClass = isCurrentMissed && !task.done
+          ? 'bg-red-50 dark:bg-red-950/25 border-red-300 dark:border-red-500/35 opacity-85 cursor-not-allowed'
+          : (task.done
+              ? 'bg-amber-50/70 dark:bg-amber-500/10 border-amber-400/60 dark:border-amber-500/40 cursor-pointer'
+              : 'bg-zinc-50/80 dark:bg-zinc-950 border-zinc-200 dark:border-zinc-800 hover:border-amber-500/45 cursor-pointer');
+
+        return `
+          <div onclick="toggleTrackerTask(${tIdx})" class="flex items-start justify-between gap-4 p-4 sm:p-5 rounded-3xl border transition ${rowClass}">
+            <div class="flex items-start gap-3.5 flex-1 min-w-0">
+              <div class="w-6 h-6 mt-0.5 rounded-full flex items-center justify-center border-2 text-xs font-black shrink-0 transition ${task.done ? 'bg-amber-500 border-amber-500 text-zinc-950' : (isCurrentMissed ? 'border-red-500/60 text-red-500' : 'border-zinc-400 dark:border-zinc-600 text-transparent')}">${task.done ? '✓' : (isCurrentMissed ? '✕' : '✓')}</div>
+              <div class="space-y-1 flex-1 min-w-0">
+                <div class="text-sm sm:text-[15px] font-bold ${task.done ? 'line-through text-zinc-400 dark:text-zinc-500' : (isCurrentMissed ? 'text-red-700 dark:text-red-200' : 'text-zinc-950 dark:text-zinc-100')}">
+                  ${escapeHtml(taskLabel)}
+                </div>
+                ${taskNote ? `
+                  <p class="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed pl-3 border-l-2 border-amber-500/45">
+                    ${escapeHtml(taskNote)}
+                  </p>
+                ` : ''}
+              </div>
+            </div>
+            <button type="button" onclick="event.stopPropagation(); deleteTrackerTask(${tIdx})" class="text-zinc-400 hover:text-red-500 px-2.5 py-1 text-xs rounded-full shrink-0" aria-label="Delete task">✕</button>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function selectTrackerDay(idx) {
+      if (idx < 0 || idx >= state.days.length) return;
+      state.activeDayIdx = idx;
+      renderHabitTracker();
+    }
+
+    function toggleTrackerTask(tIdx) {
+      const currentDay = state.days[state.activeDayIdx];
+      if (!currentDay) return;
+
+      const isInfinite = state.planMode === 'infinite';
+      const elapsedDays = isInfinite ? 0 : getElapsedCalendarDays(state.planStartDate);
+      const alreadyDone = currentDay.tasks.length > 0 && currentDay.tasks.every(t => t.done);
+      if (!isInfinite && state.activeDayIdx < elapsedDays && !alreadyDone) {
+        showToast(
+          state.lang === 'en'
+            ? '🔒 This day has already passed and is marked as missed.'
+            : '🔒 ეს დღე უკვე გავიდა და დაფიქსირდა როგორც ჩავარდნილი.'
+        );
+        return;
+      }
+
+      const task = currentDay.tasks[tIdx];
+      if (!task) return;
+
+      const wasCompletedBefore = currentDay.tasks.length > 0 && currentDay.tasks.every(t => t.done);
+      task.done = !task.done;
+      const isCompletedNow = currentDay.tasks.length > 0 && currentDay.tasks.every(t => t.done);
+
+      saveTrackerState();
+      renderHabitTracker();
+
+      if (!wasCompletedBefore && isCompletedNow) {
+        const hasNextDay = state.planMode !== 'infinite' && state.activeDayIdx < state.days.length - 1;
+        if (hasNextDay) {
+          const completedDayNum = currentDay.day;
+          const nextDayNum = state.days[state.activeDayIdx + 1].day;
+          showToast(
+            state.lang === 'en'
+              ? `🎉 Day ${completedDayNum} completed! Moving to Day ${nextDayNum}...`
+              : `🎉 დღე ${completedDayNum} შესრულდა! გადავდივართ დღე ${nextDayNum}-ზე...`
+          );
+          setTimeout(() => {
+            if (state.activeDayIdx < state.days.length - 1) {
+              state.activeDayIdx += 1;
+              renderHabitTracker();
+            }
+          }, 800);
+        } else {
+          showToast(
+            state.lang === 'en'
+              ? '🏆 All tasks completed!'
+              : '🏆 ყველა დავალება შესრულდა!'
+          );
+        }
+      }
+    }
+
+    function handleAddCustomTask(e) {
+      e.preventDefault();
+      const input = document.getElementById('new-habit-input');
+      const noteInput = document.getElementById('new-habit-note-input');
+      const allDaysCheckbox = document.getElementById('add-habit-all-days');
+      const val = input.value.trim();
+      const noteVal = noteInput ? noteInput.value.trim() : '';
+      if (!val) return;
+
+      if (allDaysCheckbox && allDaysCheckbox.checked && state.planMode !== 'infinite') {
+        state.days.forEach(d => {
+          d.tasks.push({ ka: val, en: val, noteKa: noteVal, noteEn: noteVal, done: false });
+        });
+      } else {
+        state.days[state.activeDayIdx].tasks.push({ ka: val, en: val, noteKa: noteVal, noteEn: noteVal, done: false });
+      }
+
+      input.value = '';
+      if (noteInput) noteInput.value = '';
+      saveTrackerState();
+      renderHabitTracker();
+    }
+
+    function deleteTrackerTask(tIdx) {
+      state.days[state.activeDayIdx].tasks.splice(tIdx, 1);
+      saveTrackerState();
+      renderHabitTracker();
+    }
+
+    function handleResetTracker() {
+      state.days = cloneDefaultDays();
+      state.planTitle = '';
+      state.planOverview = '';
+      state.planEmoji = '🦁';
+      state.planMode = 'fixed';
+      state.planStartDate = getTodayDateString();
+      state.activeDayIdx = 0;
+      safeSetStorage('lionhabits_plan_title', '');
+      safeSetStorage('lionhabits_plan_overview', '');
+      safeSetStorage('lionhabits_plan_emoji', '🦁');
+      safeSetStorage('lionhabits_plan_mode', 'fixed');
+      safeSetStorage('lionhabits_plan_start_date', state.planStartDate);
+      saveTrackerState();
+      renderHabitTracker();
+      showToast(state.lang === 'en' ? 'Progress & default program restored' : 'პროგრესი და საწყისი პროგრამა აღდგენილია');
+    }
+
+    async function saveTrackerState() {
+      safeSetStorage('lionhabits_bilingual_days_v2', JSON.stringify(state.days));
+      if (supabaseClient && state.user && !state.user.isLocalFallback) {
+        try {
+          await supabaseClient.from('profiles').update({
+            habit_data: {
+              planTitle: state.planTitle,
+              planOverview: state.planOverview,
+              planEmoji: state.planEmoji,
+              planMode: state.planMode,
+              planStartDate: state.planStartDate,
+              days: state.days
+            }
+          }).eq('id', state.user.id);
+        } catch (e) {}
+      }
+    }
+
+    // AI MENTOR PLAN PARSER & ONE-CLICK APPLY
+    function goToMentorForPlan() {
+      switchTab('mentor');
+      const input = document.getElementById('mentor-text-input');
+      if (input) {
+        setTimeout(() => input.focus(), 150);
+      }
+    }
+
+    function parsePlanFromMentorText(rawText, userPrompt = '') {
+      if (!rawText || typeof rawText !== 'string') return null;
+
+      try {
+        const jsonMatch = rawText.match(/\{[\s\S]*"days"\s*:\s*\[[\s\S]*\][\s\S]*\}/);
+        if (jsonMatch) {
+          const parsed = JSON.parse(jsonMatch[0]);
+          if (Array.isArray(parsed.days) && parsed.days.length >= 1) {
+            const normalizedDays = parsed.days.slice(0, 90).map((d, idx) => {
+              const dayNum = Number(d.day) || (idx + 1);
+              const titleText = typeof d.title === 'object'
+                ? (d.title[state.lang] || d.title.en || d.title.ka || `Day ${dayNum}`)
+                : (d.title || (state.lang === 'en' ? `Day ${dayNum}` : `დღე ${dayNum}`));
+              const stdText = typeof d.standard === 'object'
+                ? (d.standard[state.lang] || d.standard.en || d.standard.ka || '')
+                : (d.standard || titleText);
+              const rawTasks = Array.isArray(d.tasks) ? d.tasks : [];
+              const tasks = rawTasks
+                .map(t => {
+                  if (typeof t === 'string') {
+                    const splitParts = t.split(/\s+[—–-]\s+/);
+                    return {
+                      title: splitParts[0].trim(),
+                      note: splitParts.slice(1).join(' — ').trim()
+                    };
+                  }
+                  const tTitle = t.title || t[state.lang] || t.en || t.ka || t.text || '';
+                  const tNote = t.note || t.explanation || t.desc || t.noteKa || t.noteEn || '';
+                  return { title: String(tTitle).trim(), note: String(tNote).trim(), done: Boolean(t.done) };
+                })
+                .filter(t => t.title.length > 0)
+                .map(t => ({
+                  ka: t.title,
+                  en: t.title,
+                  noteKa: t.note,
+                  noteEn: t.note,
+                  done: Boolean(t.done)
+                }));
+
+              return {
+                day: dayNum,
+                title: { ka: titleText, en: titleText },
+                standard: { ka: stdText, en: stdText },
+                tasks: tasks.length > 0 ? tasks : [{ ka: titleText, en: titleText, noteKa: '', noteEn: '', done: false }]
+              };
+            });
+
+            if (normalizedDays.length >= 1) {
+              return {
+                action: parsed.action === 'edit' ? 'edit' : 'create',
+                title: (parsed.title || '').trim(),
+                overview: (parsed.overview || parsed.description || '').trim(),
+                emoji: (parsed.emoji || '🦁').trim(),
+                days: normalizedDays
+              };
+            }
+          }
+        }
+      } catch (e) {}
+
+      const lines = rawText
+        .split('\n')
+        .map(l => l.trim())
+        .filter(Boolean);
+
+      const dayHeaderRegex = /^(?:#+\s*)?(?:\*{1,2})?(?:Day|დღე)\s*(\d+)(?:\s*[-–—]\s*(\d+))?(?:\*{1,2})?\s*[:\-–—.]?\s*(.*)$/i;
+      const daysMap = new Map();
+      let currentRange = null;
+      let extractedOverview = '';
+
+      for (const line of lines) {
+        const cleanLine = line.replace(/\*\*/g, '').trim();
+        const headerMatch = cleanLine.match(dayHeaderRegex);
+
+        if (headerMatch) {
+          const startDay = parseInt(headerMatch[1], 10);
+          const endDay = headerMatch[2] ? Math.min(90, parseInt(headerMatch[2], 10)) : startDay;
+          const restTitle = (headerMatch[3] || '').trim();
+
+          if (startDay >= 1 && startDay <= 90) {
+            currentRange = [];
+            for (let d = startDay; d <= Math.max(startDay, endDay); d++) {
+              currentRange.push(d);
+              if (!daysMap.has(d)) {
+                const fallbackTitle = restTitle || (state.lang === 'en' ? `Day ${d} Focus` : `დღე ${d} — ფოკუსი`);
+                daysMap.set(d, {
+                  day: d,
+                  title: { ka: fallbackTitle, en: fallbackTitle },
+                  standard: { ka: fallbackTitle, en: fallbackTitle },
+                  tasks: []
+                });
+              }
+            }
+          }
+          continue;
+        }
+
+        if (!currentRange && !extractedOverview && cleanLine.length > 20 && !/^(?:#|Day|დღე)/i.test(cleanLine)) {
+          extractedOverview = cleanLine;
+        }
+
+        if (currentRange && currentRange.length > 0) {
+          const isBullet = /^(?:[-•*▪✓☑]|\d+[.)])\s+/.test(cleanLine);
+          const rawTaskLine = cleanLine
+            .replace(/^(?:[-•*▪✓☑]|\d+[.)])\s+/, '')
+            .replace(/^\[[ xX]?\]\s*/, '')
+            .trim();
+
+          if (rawTaskLine.length >= 3 && rawTaskLine.length <= 240 && (isBullet || daysMap.get(currentRange[0]).tasks.length < 5)) {
+            const parts = rawTaskLine.split(/\s+[—–:]\s+/);
+            const tTitle = parts[0].trim();
+            const tNote = parts.slice(1).join(' — ').trim();
+
+            for (const d of currentRange) {
+              const entry = daysMap.get(d);
+              if (entry && entry.tasks.length < 8) {
+                entry.tasks.push({
+                  ka: tTitle,
+                  en: tTitle,
+                  noteKa: tNote,
+                  noteEn: tNote,
+                  done: false
+                });
+              }
+            }
+          }
+        }
+      }
+
+      if (daysMap.size >= 1) {
+        const sortedDays = Array.from(daysMap.values()).sort((a, b) => a.day - b.day);
+        return {
+          title: '',
+          overview: extractedOverview,
+          emoji: '🦁',
+          days: sortedDays.map(d => ({
+            ...d,
+            tasks: d.tasks.length > 0
+              ? d.tasks
+              : [{ ka: d.title.ka, en: d.title.en, noteKa: '', noteEn: '', done: false }]
+          }))
+        };
+      }
+
+      return null;
+    }
+
+    function applyGeneratedPlanToTracker(planId) {
+      const planObj = state.generatedPlansMap[planId];
+      if (!planObj || !Array.isArray(planObj.days) || planObj.days.length === 0) return;
+
+      const isEdit = planObj.action === 'edit';
+      state.days = JSON.parse(JSON.stringify(planObj.days));
+
+      if (isEdit) {
+        if (planObj.title) state.planTitle = planObj.title;
+        if (planObj.overview) state.planOverview = planObj.overview;
+        if (planObj.emoji) state.planEmoji = planObj.emoji;
+        if (state.activeDayIdx >= state.days.length) {
+          state.activeDayIdx = Math.max(0, state.days.length - 1);
+        }
+      } else {
+        state.planTitle = planObj.title || `AI Digital Program (${state.days.length} Days)`;
+        state.planOverview = planObj.overview || '';
+        state.planEmoji = planObj.emoji || '🦁';
+        state.planMode = 'fixed';
+        state.planStartDate = getTodayDateString();
+        state.activeDayIdx = 0;
+        safeSetStorage('lionhabits_plan_mode', 'fixed');
+        safeSetStorage('lionhabits_plan_start_date', state.planStartDate);
+      }
+
+      safeSetStorage('lionhabits_plan_title', state.planTitle);
+      safeSetStorage('lionhabits_plan_overview', state.planOverview);
+      safeSetStorage('lionhabits_plan_emoji', state.planEmoji);
+
+      saveTrackerState();
+      renderHabitTracker();
+      switchTab('tracker');
+
+      showToast(
+        isEdit
+          ? `✅ "${state.planTitle || 'Your Plan'}" updated — your completed progress was preserved!`
+          : `✅ "${state.planTitle}" opened in Your Plan!`
+      );
+    }
+
+    // PARTNER / AFFILIATE VIEW
+    function refreshPartnerView() {
+      const dict = I18N[state.lang];
+      const field = document.getElementById('partner-url-field');
+      const bal = document.getElementById('partner-balance-num');
+      const refs = document.getElementById('partner-refs-num');
+      const lockHeading = document.getElementById('partner-lock-heading');
+      const lockText = document.getElementById('partner-lock-text');
+      const authBtn = document.getElementById('partner-auth-btn');
+
+      const hasHttpOrigin = window.location.origin && window.location.origin.startsWith('http');
+      const base = hasHttpOrigin
+        ? (window.location.origin + window.location.pathname)
+        : 'https://lionhabits.netlify.app/';
+
+      if (field) field.value = `${base}?aff=${state.affiliateCode}`;
+      if (bal) bal.textContent = `$${state.affiliateBalance.toFixed(2)}`;
+      if (refs) refs.textContent = String(state.referralsCount);
+
+      if (state.user) {
+        if (lockHeading) lockHeading.textContent = dict.partner_unlocked_title;
+        if (lockText) lockText.textContent = dict.partner_unlocked_desc + state.user.email;
+        if (authBtn) authBtn.textContent = dict.btn_manage_account;
+      } else {
+        if (lockHeading) lockHeading.textContent = dict.partner_lock_title;
+        if (lockText) lockText.textContent = dict.partner_lock_desc;
+        if (authBtn) authBtn.textContent = dict.btn_auth_partner;
+      }
+    }
+
+    async function copyPartnerLink() {
+      const field = document.getElementById('partner-url-field');
+      if (!field) return;
+      const textToCopy = field.value;
+
+      let copied = false;
+      if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+        try {
+          await navigator.clipboard.writeText(textToCopy);
+          copied = true;
+        } catch (e) {}
+      }
+
+      if (!copied) {
+        try {
+          field.select();
+          field.setSelectionRange(0, 99999);
+          document.execCommand('copy');
+        } catch (e) {}
+      }
+
+      showToast(state.lang === 'en' ? '📋 Referral link copied!' : '📋 პარტნიორული ლინკი დაკოპირდა!');
+    }
+
+    // AI MENTOR CHAT
+    async function handleSendMentorMessage(e) {
+      if (e && typeof e.preventDefault === 'function') e.preventDefault();
+      if (state.isSendingChat) return;
+
+      const input = document.getElementById('mentor-text-input');
+      const sendBtn = document.getElementById('mentor-send-btn');
+      const text = input.value.trim();
+      if (!text) return;
+
+      input.value = '';
+      state.isSendingChat = true;
+      if (sendBtn) sendBtn.disabled = true;
+
+      const box = document.getElementById('chat-messages-box');
+      box.insertAdjacentHTML('beforeend', `
+        <div class="flex justify-end">
+          <div class="max-w-[80%] rounded-3xl rounded-tr-none bg-amber-500 text-zinc-950 font-semibold px-5 py-3.5 text-sm">
+            ${escapeHtml(text)}
+          </div>
+        </div>
+      `);
+      box.scrollTop = box.scrollHeight;
+
+      const tempId = 'mentor-reply-' + Date.now();
+      box.insertAdjacentHTML('beforeend', `
+        <div id="${tempId}" class="flex items-start gap-3.5 max-w-[85%]">
+          <div class="w-9 h-9 rounded-full bg-amber-500/15 border border-amber-500/40 flex items-center justify-center shrink-0 mt-0.5">
+            <svg class="w-5 h-5"><use href="#custom-lion-vector"></use></svg>
+          </div>
+          <div class="rounded-3xl rounded-tl-none bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 px-5 py-4 text-sm text-amber-600 dark:text-amber-300 italic">
+            ${state.lang === 'en' ? 'Designing your personal program...' : 'აწყობს შენს პერსონალურ პროგრამას...'}
+          </div>
+        </div>
+      `);
+      box.scrollTop = box.scrollHeight;
+
+      state.chatHistory.push({ role: 'user', content: text });
+
+      let reply = '';
+      try {
+        const currentPlanPayload = {
+          title: state.planTitle || 'Your Plan',
+          overview: state.planOverview || '',
+          emoji: state.planEmoji || '🦁',
+          mode: state.planMode,
+          activeDay: (state.activeDayIdx || 0) + 1,
+          days: state.days.map(d => ({
+            day: d.day,
+            title: typeof d.title === 'object' ? (d.title.en || d.title.ka || '') : d.title,
+            standard: typeof d.standard === 'object' ? (d.standard.en || d.standard.ka || '') : d.standard,
+            tasks: d.tasks.map(t => ({
+              title: t.en || t.ka || t.text || '',
+              note: t.noteEn || t.noteKa || t.note || '',
+              done: Boolean(t.done)
+            }))
+          }))
+        };
+
+        const res = await fetch('/.netlify/functions/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            message: text,
+            lang: 'en',
+            format: 'structured_digital_program',
+            currentPlan: currentPlanPayload,
+            messages: state.chatHistory.slice(-12)
+          })
+        });
+        if (res.ok) {
+          const data = await res.json();
+          reply = (data?.reply || data?.choices?.[0]?.message?.content || '').trim();
+        }
+      } catch (err) {}
+
+      const el = document.getElementById(tempId);
+      if (el) {
+        const msgDiv = el.querySelector('div:last-child');
+        msgDiv.classList.remove('text-amber-600', 'dark:text-amber-300', 'italic');
+        if (reply) {
+          state.chatHistory.push({ role: 'assistant', content: reply });
+          msgDiv.classList.add('text-zinc-800', 'dark:text-zinc-200', 'leading-relaxed');
+          const cleanDisplay = reply.replace(/```json[\s\S]*?```/g, '').trim() || reply;
+          msgDiv.innerHTML = escapeHtml(cleanDisplay).replace(/\n/g, '<br>');
+
+          const parsedPlanObj = parsePlanFromMentorText(reply, text);
+          if (parsedPlanObj && Array.isArray(parsedPlanObj.days)) {
+            const planId = 'plan_' + Date.now();
+            state.generatedPlansMap[planId] = parsedPlanObj;
+            const isEditAction = parsedPlanObj.action === 'edit';
+            const daysBadge = isEditAction
+              ? `Plan Edit Ready • ${parsedPlanObj.days.length} Days`
+              : `${parsedPlanObj.days.length} Days • Ready`;
+            const btnLabel = isEditAction
+              ? I18N.en.btn_update_ai_plan
+              : I18N.en.btn_apply_ai_plan;
+
+            msgDiv.insertAdjacentHTML('beforeend', `
+              <div class="mt-4 pt-3.5 border-t border-zinc-200 dark:border-zinc-800 flex flex-wrap items-center justify-between gap-3">
+                <span class="text-xs font-bold text-amber-600 dark:text-amber-400">✨ ${daysBadge}</span>
+                <button type="button" onclick="applyGeneratedPlanToTracker('${planId}')" class="px-5 py-2.5 rounded-full text-xs font-extrabold text-zinc-950 bg-gradient-to-r from-amber-400 to-amber-500 hover:brightness-110 shadow-md transition">
+                  ${escapeHtml(btnLabel)}
+                </button>
+              </div>
+            `);
+          }
+        } else {
+          msgDiv.classList.add('text-zinc-500', 'dark:text-zinc-400', 'leading-relaxed');
+          msgDiv.textContent = state.lang === 'en'
+            ? 'AI mentor server (/.netlify/functions/chat) is not connected yet. Add GEMINI_API_KEY in Netlify Environment Variables and deploy with netlify/functions/chat.js.'
+            : 'AI სერვერი (/api/chat) ჯერ არ არის მიბმული. დაჰოსტე Vercel-ზე OPENAI_API_KEY-ით გასააქტიურებლად.';
+        }
+      }
+      box.scrollTop = box.scrollHeight;
+
+      state.isSendingChat = false;
+      if (sendBtn) sendBtn.disabled = false;
+    }
+
+    function showToast(msg) {
+      const t = document.getElementById('toast-msg');
+      if (!t) return;
+      t.textContent = msg;
+      t.classList.remove('opacity-0', 'translate-y-4');
+      clearTimeout(window._toastTimer);
+      window._toastTimer = setTimeout(() => {
+        t.classList.add('opacity-0', 'translate-y-4');
+      }, 3200);
+    }
+
+    function escapeHtml(s) {
+      return String(s)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
+    window.addEventListener('DOMContentLoaded', initApp);
+  </script>
+</body>
+</html>
